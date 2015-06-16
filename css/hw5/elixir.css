@@ -1,0 +1,24 @@
+.green {
+    color: green;
+}
+
+.blue {
+    color: blue;
+}
+
+.purple {
+    color: purple;
+}
+
+.red {
+    color: red;
+}
+
+h1,
+h2 {
+    color: gray;
+}
+
+body {
+    font-family: Arial;
+}
