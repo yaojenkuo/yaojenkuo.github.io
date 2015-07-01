@@ -1,35 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
-    <title>CSIE HTML253</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="author" content="ACS251">
+    <meta name="keywords" content="Keyword 1,Keyword 2">
+    <meta name="description" content="description">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <title>Tony Yao-Jen Kuo</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 </head>
 
 <body>
-    <h2>CSIE HTML253 Homework</h2>
-    <p>郭耀仁</p>
-    <a href="hw1.html">作業1</a>
-    <a href="hw2.html">作業2</a>
-    <a href="hw3.html">作業3</a>
-    <a href="hw4.html">作業4</a>
-    <a href="hw5.html">作業5</a>
-    <hr>
-    <p>我之後想要架的網站:</p>
-    <h1>乒乓器材王</h1>
-    <ul>
-        <li>登入</li>
-        <li>用Facebook帳號登入</li>
-        <li>用Google+帳號登入</li>
-        <li>註冊</li>
-        <li>登出</li>
-    </ul>
-    <h2>乒乓器材王是一個線上乒乓二手器材媒合的平台</h2>
-    <p>我們提供專業且精準的搜尋服務來快速媒合買家與賣家。</p>
-    <img src="images/blade.JPG" alt="球拍">
-    <img src="images/rubber.JPG" alt="膠皮">
-    <h3>我要登錄器材</h3>
-    <h3>我要尋找器材</h3>
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">Tony Yao-Jen Kuo</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="myResume.html" target="_blank">ABOUT ME</a></li>
+                        <li><a href="#">PORTFOLIO</a></li>
+                        <li><a href="#" class="active">CSIE HTML 253</a></li>
+                        <li><a href="#">TRADEQUIP</a></li>
+                        <li><a href="https://tw.linkedin.com/pub/tony-yao-jen-kuo/b0/2a7/41" target="_blank">MY LinkedIn PROFILE</a></li>
+                </div>
+            </div>
+        </nav>
+        <!-- Main component for a primary marketing message-->
+        <div class="jumbotron">
+            <h1>Welcome</h1>
+            <p>It is nice getting to know a ping pong talent(estimated USATT rating: 2,100+), who is also a marathon runner (PB: 03:00:54) and a data enthusiast.</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h2>ABOUT ME</h2>
+                <p>Check out my resume, I am an analytical consultant at &copy;SAS Software.</p>
+                <p><a class="btn btn-default" href="myResume.html" role="button" target="_blank">View details &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>PORTFOLIO</h2>
+                <p>Check out the portfolio of mine including assignments and projects.</p>
+                <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>CSIE HTML 253</h2>
+                <p>Check out the complete homework/practice from CSIE HTML 253.</p>
+                <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>TRADEQUIP</h2>
+                <p>TRADEQUIP is dedicated to be a prototype of an second-hand sport equipments match-maker. You may find your desired equipments or register your own here. We will start from Ping Pong including rackets and rubbers, since it is the love of the founder.</p>
+                <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>MY LinkedIn PROFILE</h2>
+                <p>You can also check out my profile on LinkedIn.</p>
+                <p><a class="btn btn-default" href="https://tw.linkedin.com/pub/tony-yao-jen-kuo/b0/2a7/41" role="button" target="_blank">View details &raquo;</a></p>
+            </div>
+        </div>
+        <hr>
+        <footer>
+            <p>&copy; Tony Yao-Jen Kuo 2015</p>
+        </footer>
+    </div>
+    <!-- /container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>
 
 </html>

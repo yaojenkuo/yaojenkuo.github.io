@@ -1,0 +1,125 @@
+.clear {
+    clear: both;
+}
+
+html,
+body {
+    background-color: #181818;
+    font-family: verdana;
+}
+
+.cv {
+    background-color: #F3F3F3;
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.person {
+    height: auto;
+    padding: 25px 35px;
+    border-bottom: 2px solid #cf8a05;
+    background: #ededed;
+}
+
+#photo {
+    width: 15%;
+    float: left;
+    margin-right: 30px;
+}
+
+#photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+}
+
+#name {
+    float: left;
+}
+
+#name h1 {
+    font-size: 1.8em;
+    margin-bottom: -6px;
+}
+
+#name h2 {
+    font-size: 1.2em;
+    margin-left: 2px;
+}
+
+#contact {
+    float: right;
+}
+
+#contact ul {
+    list-style-type: none;
+    font-size: 0.9em;
+    margin-top: 2px;
+}
+
+#contact ul li {
+    margin-bottom: 3px;
+    color: #444;
+}
+
+.content {
+    padding: 0 40px;
+}
+
+section {
+    border-top: 1px solid #dedede;
+    padding: 20px 0 0;
+}
+
+section:first-child {
+    border-top: 0;
+}
+
+section:last-child {
+    padding: 20px 0 10px;
+}
+
+.sectionTitle {
+    float: left;
+    width: 25%;
+}
+
+.sectionContent {
+    float: right;
+    width: 72.5%;
+}
+
+.sectionContent ul {
+    list-style: disc;
+}
+
+.sectionTitle h1 {
+    font-style: italic;
+    font-size: 1.5em;
+    color: #cf8a05;
+}
+
+.sectionContent h2 {
+    font-size: 1.2em;
+    margin-bottom: -2px;
+}
+
+.subDetails {
+    font-size: 0.8em;
+    font-style: italic;
+    margin-bottom: 3px;
+}
+
+.skills {
+    list-style-type: none;
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+
+.skills ul li {
+    margin-bottom: 3px;
+}
