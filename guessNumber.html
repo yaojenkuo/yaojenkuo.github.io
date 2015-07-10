@@ -11,38 +11,43 @@
     <meta name="description" content="description">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/favicon.png">
-    <link rel="stylesheet" href="css/guessNumber/guessNumber.css">
+    <link rel="stylesheet" href="guessNumber2.css">
     <title>Guess Number</title>
 </head>
 
 <body>
-    <div id="container">
-        <div>
+    <div class="container">
+        <div class="header">
             <h1>Guess Number</h1></div>
-        <h3>"A" indicates both the number AND the position are CORRECT.</h3>
-        <h3>"B" indicates the correct number BUT in the WRONG spot.</h3>
-        <!--
-        <p>Now submit your guess with 4 distinctive numbers:</p>
-        <input type="text" id="num" maxlength="4">
-        <button type="button" onclick="guessNum2()">SUBMIT</button>
-        -->
-        <div id="component">
-            <button type="button" onclick="guessNum()">START PLAYING!</button>
+        <div class="rule">
+            <h3>"A" indicates both the number AND the position are CORRECT.</h3>
+            <h3>"B" indicates the correct number BUT in the WRONG spot.</h3></div>
+        <div class="inputBox">
+            <p>Enter Your Guess Here:
+                <input type="text" id="myInput" maxlength="4" onKeyPress="enterPress()">
+                <button onclick="guessNum()">SUBMIT</button>
+                <button onclick="reloadNum()">RELOAD</button>
+            </p>
         </div>
-        <!--
-    <div>
-        <h2>Input</h2>
-        <hr>
-        <p id="p1"></p>
+        <div class="row">
+            <div>
+                <div class="col-m-2 col-2"></div>
+                <div class="col-m-4 col-4" id="inputResult">
+                    <h2>Input</h2>
+                    <hr>
+                    <p id="returnInput"></p>
+                </div>
+                <div class="col-m-4 col-4" id="inputResult">
+                    <h2>Result</h2>
+                    <hr>
+                    <p id="returnResult"></p>
+                </div>
+                <div class="col-m-2 col-2"></div>
+            </div>
+        </div>
+        <div class="footer">2015 HTML253 - Guess Number</div>
     </div>
-    <div>
-        <h2>Result</h2>
-        <hr>
-        <p id="p2"></p>
-    </div>
-    -->
-    </div>
-    <script type="text/javascript" src="scripts/guessNumber.js"></script>
+    <script type="text/javascript" src="guessNumber2.js"></script>
 </body>
 
 </html>
