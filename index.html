@@ -5,84 +5,188 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta name="author" content="ACS251">
+    <meta name="author" content="Yao-Jen Kuo">
     <meta name="keywords" content="Keyword 1,Keyword 2">
     <meta name="description" content="description">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/favicon.png">
     <title>Tony Yao-Jen Kuo</title>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="css/index/index.css">
+    <!--Custom CSS-->
+    <link href="css/stylishPortfolio.css" rel="stylesheet">
+    <!--Custom fonts-->
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-    <div class="container">
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html">Tony Yao-Jen Kuo</a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="myResume.html" target="_blank">About Me</a></li>
-                        <li><a href="portfolioOneCol.html">Portfolio</a></li>
-                        <li><a href="tradequip.html" target="_blank">TradEquip</a></li>
-                        <li><a href="https://tw.linkedin.com/pub/tony-yao-jen-kuo/b0/2a7/41" target="_blank">My LinkedIn</a></li>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <!-- Main component for a primary marketing message-->
-    <div class="container">
-        <div class="jumbotron">
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-left toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a href="#top" onclick=$ ( "#menu-close").click();>Tony Yao-Jen Kuo</a>
+            </li>
+            <li>
+                <a href="#top" onclick=$ ( "#menu-close").click();>Home</a>
+            </li>
+            <li>
+                <a href="#services" onclick=$ ( "#menu-close").click();>About Me</a>
+            </li>
+            <li>
+                <a href="#portfolio" onclick=$ ( "#menu-close").click();>Portfolio</a>
+            </li>
+            <li>
+                <a href="#contact" onclick=$ ( "#menu-close").click();>Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- End of Navigation -->
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
             <h1>Welcome</h1>
-            <p>It is nice getting to know a ping pong talent(estimated USATT rating: 2,100+), who is also a marathon runner (PB: 03:00:54) and a data enthusiast.</p>
+            <h3>It is nice getting to know a ping pong player, who is also a marathon runner and a data enthusiast.</h3>
+            <br>
+            <a href="#services" class="btn btn-dark btn-lg">Find Out More</a>
         </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <h2>About Me</h2>
-                <p>Check out my resume, I am an analytical consultant at &copy;SAS Software.</p>
-                <p><a class="btn btn-default" href="myResume.html" role="button" target="_blank">View details &raquo;</a></p>
-            </div>
-            <div class="col-md-6">
-                <h2>Portfolio</h2>
-                <p>Check out the portfolio of mine including data analysis projects from self-paced learning through MOOC or text books and some CSS/Bootstrap assignments from CSIE HTML 253.</p>
-                <p><a class="btn btn-default" href="portfolioOneCol.html" role="button">View details &raquo;</a></p>
-            </div>
-            <div class="col-md-6">
-                <h2>TradEquip</h2>
-                <p>TradEquip is dedicated to be the prototype of a second-hand sport equipments match-maker. You may find your desired equipments or register your own here. We will start from Ping Pong including rackets and rubbers, since it is the love of the founder.</p>
-                <p><a class="btn btn-default" href="tradequip.html" role="button" target="_blank">View details &raquo;</a></p>
-            </div>
-            <div class="col-md-6">
-                <h2>My LinkedIn</h2>
-                <p>You can also check out my profile on LinkedIn.</p>
-                <p><a class="btn btn-default" href="https://tw.linkedin.com/pub/tony-yao-jen-kuo/b0/2a7/41" role="button" target="_blank">View details &raquo;</a></p>
+    </header>
+    <!-- End of Header -->
+    <!-- About Me -->
+    <section id="services" class="services bg-primary">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2><strong>About Me</strong></h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-database fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Data Enthusiast</strong>
+                                </h4>
+                                <p>Analytical consultant at Professional Service Department, SAS.</p>
+                                <a href="#" class="btn btn-light">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-tachometer fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Marathon Runner</strong>
+                                </h4>
+                                <p>Boston qualifier, PB 03:00:54 at 2015 Seoul Marathon.</p>
+                                <a href="#" class="btn btn-light">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-pinterest-square fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Ping Pong Player</strong>
+                                </h4>
+                                <p>Two-sided loop attacking style, estimated USATT rating above 2,000.</p>
+                                <a href="#" class="btn btn-light">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <hr>
-        <footer>
-            <p>&copy; Tony Yao-Jen Kuo 2015</p>
-        </footer>
-    </div>
-    <!-- /container -->
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    </section>
+    <!-- End of About Me -->
+    <!-- Portfolio -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h2><strong>Portfolio</strong></h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="myResume.html" target="_blank">
+                                    <img class="img-portfolio img-responsive" src="img/stylishPortfolio/portfolio-1.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="guessNumber.html" target="_blank">
+                                    <img class="img-portfolio img-responsive" src="img/stylishPortfolio/portfolio-2.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="tradequip.html" target="_blank">
+                                    <img class="img-portfolio img-responsive" src="img/stylishPortfolio/portfolio-3.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    <img class="img-portfolio img-responsive" src="img/stylishPortfolio/portfolio-4.jpg">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<a href="#" class="btn btn-dark">View More Items</a>-->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Portfolio -->
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h2><strong>Contact</strong></h2>
+                    <hr class="small">
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-phone fa-fw"></i> (+886)933-223818</li>
+                        <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:tonykuoyj@gmail.com">tonykuoyj@gmail.com</a>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="https://www.facebook.com/yaojen.kuo.1" target="_blank"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://plus.google.com/u/0/115283668914988550359/posts" target="_blank"><i class="fa fa-google-plus fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://tw.linkedin.com/pub/tony-yao-jen-kuo/b0/2a7/41" target="_blank"><i class="fa fa-linkedin fa-fw fa-3x"></i></a>
+                        </li>
+                    </ul>
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; Tony Yao-Jen Kuo 2015</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End of Footer -->
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- End of jQuery -->
+    <!-- Custom Theme JavaScript -->
+    <script src="js/stylishPortfolio.js"></script>
+    <!-- End of Custom Theme JavaScript -->
 </body>
 
 </html>
