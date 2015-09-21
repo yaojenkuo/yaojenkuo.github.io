@@ -1,0 +1,107 @@
+---
+title: "Drawing ROC Curves in R with ROCR Package"
+author: "Yao-Jen Kuo"
+date: "Monday, September 21, 2015"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 2
+    number_sections: false
+    theme: united
+    highlight: tango
+    fig_width: 9
+    fig_height: 5
+---
+
+#Introduction
+ROC curves are commonly used in the performance evaluation of models with binary outcomes. This article demonstrates an easy example of building logistic regression with R's built-in dataset "diamonds" and drawing ROC curves to determine which characteristic: carat, cut, or clarity best predicts whether the diamond is expensive or not.
+We will use `library(ggplot2)` and `library(ROCR)` these 2 packages in this article.
+
+#Exploring and Preparing Data
+Let us first check the structure and statistics summary of "diamonds."
+```{r, echo=FALSE}
+library(ROCR)
+library(ggplot2)
+```
+```{r, echo=TRUE}
+str(diamonds)
+summary(diamonds)
+```
+
+##Creating a Binary Target: isExpensive
+There is no binary variable for our target in the original "diamonds", so let us assign that price over median: $2,400 as "EXPENSIVE."
+```{r, echo=TRUE}
+plot(density(diamonds$price), main="Distribution of Diamond Price")
+polygon(density(diamonds$price), col="pink")
+abline(v=2400, lwd=3, col="skyblue")
+diamonds$isExpensive <- diamonds$price > 2400
+```
+
+#Training a Model on The Data
+Since the number of samples are abundant, as usual, we adopt 70% for training and 30% for test.
+```{r}
+set.seed(1)
+isTest <- runif(nrow(diamonds)) > 0.70
+train <- diamonds[isTest==FALSE,]
+test <- diamonds[isTest==TRUE,]
+```
+
+##Model 1: cut as the only predictor
+```{r, echo=TRUE}
+fit1 <- glm(isExpensive ~cut, data=train, family=binomial())
+```
+```{r, echo=FALSE}
+prob1 <- predict(fit1, newdata=test, type="response")
+pred1 <- prediction(prob1, test$isExpensive)
+perf1 <- performance(pred1, measure = "tpr", x.measure = "fpr")
+auc1 <- performance(pred1, measure = "auc")
+auc1 <- auc1@y.values[[1]]
+```
+```{r, echo=TRUE}
+auc1
+```
+
+##Model 2: clarity as the only predictor
+```{r, echo=TRUE}
+fit2 <- glm(isExpensive ~clarity, data=train, family=binomial())
+```
+```{r, echo=FALSE}
+prob2 <- predict(fit2, newdata=test, type="response")
+pred2 <- prediction(prob2, test$isExpensive)
+perf2 <- performance(pred2, measure = "tpr", x.measure = "fpr")
+auc2 <- performance(pred2, measure = "auc")
+auc2 <- auc2@y.values[[1]]
+```
+```{r, echo=TRUE}
+auc2
+```
+
+##Model 3: carat as the only predictor
+```{r, echo=TRUE}
+fit3 <- glm(isExpensive ~carat, data=train, family=binomial())
+```
+```{r, echo=FALSE}
+prob3 <- predict(fit3, newdata=test, type="response")
+pred3 <- prediction(prob3, test$isExpensive)
+perf3 <- performance(pred3, measure = "tpr", x.measure = "fpr")
+auc3 <- performance(pred3, measure = "auc")
+auc3 <- auc3@y.values[[1]]
+```
+```{r, echo=TRUE}
+auc3
+```
+
+#Evaluating Model Performance
+Drawing ROC curves.
+```{r, echo=TRUE}
+plot(perf1, colorize = TRUE, lwd=3, main="ROC Curves")
+plot(perf2, add = TRUE, colorize = TRUE, lwd=3)
+plot(perf3, add = TRUE, colorize = TRUE, lwd=3)
+abline(a=0, b=1, lty=2, lwd=3, col="black")
+```
+
+#Conclusion
+* Size matters. Using $carat as the only predictor can achieve a AUC of 99%.
+* We can easily build logistic regression models using `fit <- glm()` with `family=binomial()` as assigned parameter.
+* We also demostrated how to generate training/test datasets from the original dataset in R.
+* Most importantly, we demonstrated how to plot beautiful ROC curves.
