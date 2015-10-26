@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="author" content="Yao-Jen Kuo">
+    <meta name="keywords" content="Keyword 1,Keyword 2">
+    <meta name="description" content="description">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <title>Drop Rate of Junior High School Students by Counties in Taiwan, 2014</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
+    <link rel="stylesheet" href="css/twnCountyDropRate.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Eastern Counties Has High Drop Rates in Junior High School</h1>
+            <p>
+                <ul>
+                    <li>We use R to transform/combine the census data and Shapefile into a GeoJSON file. Find source code <a href="https://github.com/yaojenkuo/ApplicationInR/blob/master/twnCountyDropRate/twnCountyDropRate.R">here</a>.</li>
+                    <li>We use leaflet.js to create the choropleth map. Find source code <a href="https://github.com/yaojenkuo/yaojenkuo.github.io/blob/master/js/twnCountyDropRate.js">here</a>.</li>
+                </ul>
+            </p>
+        </div>
+        <div id="map"></div>
+        <footer>
+            <h3>Reference</h3>
+            <ul>
+                <li><a href="http://www.gadm.org/" target="_blank">GADM</a></li>
+                <li><a href="http://statdb.dgbas.gov.tw/pxweb/dialog/statfile9.asp" target="_blank">TW National Statistics</a></li>
+                <li><a href="http://leafletjs.com/examples/choropleth.html#map" target="_blank">Leaflet</a></li>
+            </ul>
+        </footer>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+    <script src="js/counties.js"></script>
+    <script src="js/twnCountyDropRate.js"></script>
+</body>
+
+</html>
