@@ -296,12 +296,12 @@ hr.small {
 
 /* Map */
 
-.map {
-    height: 500px;
+#map {
+    height: 300px;
 }
 
 @media(max-width:768px) {
-    .map {
+    #map {
         height: 75%;
     }
 }
