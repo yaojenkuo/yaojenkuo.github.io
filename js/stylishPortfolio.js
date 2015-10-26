@@ -27,6 +27,7 @@ $(function() {
     });
 });
 
+//Leaflet map
 var map = L.map('map').setView([25.059, 121.541], 15);
 
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
