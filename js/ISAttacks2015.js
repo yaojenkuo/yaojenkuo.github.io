@@ -17,7 +17,7 @@ info.onAdd = function(map) {
 
 info.update = function(props) {
     this._div.innerHTML = '<h4>Major IS Attacks in 2015</h4>' + (props ?
-        'Date: ' + props.date + '<br />' + 'Country: ' + props.country + '<br />' + 'City: ' + props.city + '<br />' + 'Death: ' + props.deaths + ' people' : 'Hover over a country');
+        'Date: ' + props.date + '<br />' + 'Country: ' + props.country + '<br />' + 'City: ' + props.city + '<br />' + 'Deaths: ' + props.deaths : 'Hover over a country');
 };
 
 info.addTo(map);
