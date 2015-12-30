@@ -1,6 +1,6 @@
 L.mapbox.accessToken = 'pk.eyJ1IjoidG9ueWt1b3lqIiwiYSI6ImNpZnJ2cjV1bjB4YzNzMm0wcXE4a2ZhaTIifQ.ZH43M-eU67KjPAM3w__IvQ';
 var map = L.mapbox.map('map', 'mapbox.streets')
-    .setView([40.718, -74.003], 11);
+    .setView([24.362, 120.3], 7);
 
 var myLayer = L.mapbox.featureLayer().addTo(map);
 
@@ -10,7 +10,7 @@ var geoJson = [{
     type: 'Feature',
     "geometry": {
         "type": "Point",
-        "coordinates": [25.015274, 121.541399]
+        "coordinates": [121.541399, 25.015274]
     },
     "properties": {
         "image": "img/twnMilkMap/ntuMilk.jpg",
@@ -30,6 +30,7 @@ myLayer.on('layeradd', function(e) {
     // Create custom popup content
     var popupContent = '<a target="_blank" class="popup" href="' + feature.properties.url + '">' +
         '<img src="' + feature.properties.image + '" />' +
+        '\n' +
         feature.properties.sight +
         '</a>';
 
