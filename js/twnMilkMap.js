@@ -2,12 +2,12 @@ L.mapbox.accessToken = 'pk.eyJ1IjoidG9ueWt1b3lqIiwiYSI6ImNpZnJ2cjV1bjB4YzNzMm0wc
 var map = L.mapbox.map('map', 'mapbox.streets')
     .setView([24.362, 120.3], 7);
 
-var myLayer = L.mapbox.featureLayer().addTo(map);
-
 //Centering markers
 map.featureLayer.on('click', function(e) {
     map.panTo(e.layer.getLatLng());
 });
+
+var myLayer = L.mapbox.featureLayer().addTo(map);
 
 //Watch out the coordinates! Different order!
 
@@ -23,7 +23,7 @@ var geoJson = [{
         "marker-symbol": "slaughterhouse",
         "marker-color": "#ff8888",
         "marker-size": "large",
-        "sight": "台大牧場"
+        "sight": "台灣大學牧場"
     }
 }, {
     type: 'Feature',
@@ -38,6 +38,34 @@ var geoJson = [{
         "marker-color": "#ff8888",
         "marker-size": "large",
         "sight": "四方鮮乳生態牧場"
+    }
+}, {
+    type: 'Feature',
+    "geometry": {
+        "type": "Point",
+        "coordinates": [120.608414, 24.179819]
+    },
+    "properties": {
+        "image": "img/twnMilkMap/thu.jpg",
+        "url": "http://farm.thu.edu.tw/",
+        "marker-symbol": "slaughterhouse",
+        "marker-color": "#ff8888",
+        "marker-size": "large",
+        "sight": "東海大學實習農牧場"
+    }
+}, {
+    type: 'Feature',
+    "geometry": {
+        "type": "Point",
+        "coordinates": [120.505593, 24.054645]
+    },
+    "properties": {
+        "image": "img/twnMilkMap/delivery.jpg",
+        "url": "https://www.facebook.com/fresh.milk.delivery",
+        "marker-symbol": "slaughterhouse",
+        "marker-color": "#ff8888",
+        "marker-size": "large",
+        "sight": "主恩牧場"
     }
 }];
 
