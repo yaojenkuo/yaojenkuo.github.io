@@ -4,6 +4,11 @@ var map = L.mapbox.map('map', 'mapbox.streets')
 
 var myLayer = L.mapbox.featureLayer().addTo(map);
 
+//Centering markers
+map.featureLayer.on('click', function(e) {
+    map.panTo(e.layer.getLatLng());
+});
+
 //Watch out the coordinates! Different order!
 
 var geoJson = [{
@@ -30,7 +35,7 @@ myLayer.on('layeradd', function(e) {
     // Create custom popup content
     var popupContent = '<a target="_blank" class="popup" href="' + feature.properties.url + '">' +
         '<img src="' + feature.properties.image + '" />' +
-        '\n' +
+        '<br/>' +
         feature.properties.sight +
         '</a>';
 
