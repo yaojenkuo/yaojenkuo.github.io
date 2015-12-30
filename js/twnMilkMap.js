@@ -25,6 +25,20 @@ var geoJson = [{
         "marker-size": "large",
         "sight": "台大牧場"
     }
+}, {
+    type: 'Feature',
+    "geometry": {
+        "type": "Point",
+        "coordinates": [120.891591, 24.722730]
+    },
+    "properties": {
+        "image": "img/twnMilkMap/fourways.jpg",
+        "url": "http://www.fourways.com.tw/",
+        "marker-symbol": "slaughterhouse",
+        "marker-color": "#ff8888",
+        "marker-size": "large",
+        "sight": "四方鮮乳生態牧場"
+    }
 }];
 
 // Add custom popups to each using our custom feature properties
