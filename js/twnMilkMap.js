@@ -4,11 +4,6 @@ var map = L.mapbox.map('map', 'mapbox.streets')
 
 var myLayer = L.mapbox.featureLayer().addTo(map);
 
-//Centering markers
-map.featureLayer.on('click', function(e) {
-    map.panTo(e.layer.getLatLng());
-});
-
 //Watch out the coordinates! Different order!
 
 var geoJson = [{
@@ -109,6 +104,48 @@ var geoJson = [{
         "marker-size": "large",
         "sight": "高大鮮乳"
     }
+}, {
+    type: 'Feature',
+    "geometry": {
+        "type": "Point",
+        "coordinates": [120.459997, 22.596286]
+    },
+    "properties": {
+        "image": "img/twnMilkMap/yungde.jpg",
+        "url": "https://www.facebook.com/WanDaMuChang",
+        "marker-symbol": "slaughterhouse",
+        "marker-color": "#ff8888",
+        "marker-size": "large",
+        "sight": "萬大牧場永得鮮乳"
+    }
+}, {
+    type: 'Feature',
+    "geometry": {
+        "type": "Point",
+        "coordinates": [121.108275, 22.866327]
+    },
+    "properties": {
+        "image": "img/twnMilkMap/chulu.jpg",
+        "url": "http://www.chuluranch.com/index.aspx",
+        "marker-symbol": "slaughterhouse",
+        "marker-color": "#ff8888",
+        "marker-size": "large",
+        "sight": "初鹿鮮乳"
+    }
+}, {
+    type: 'Feature',
+    "geometry": {
+        "type": "Point",
+        "coordinates": [121.398470, 23.483668]
+    },
+    "properties": {
+        "image": "img/twnMilkMap/jjfarm.jpg",
+        "url": "http://www.jjfarm.com.tw/",
+        "marker-symbol": "slaughterhouse",
+        "marker-color": "#ff8888",
+        "marker-size": "large",
+        "sight": "吉蒸鮮乳"
+    }
 }];
 
 // Add custom popups to each using our custom feature properties
@@ -132,3 +169,8 @@ myLayer.on('layeradd', function(e) {
 
 // Add features to the map
 myLayer.setGeoJSON(geoJson);
+
+//Centering markers
+myLayer.on('click', function(e) {
+    map.panTo(e.layer.getLatLng());
+});
