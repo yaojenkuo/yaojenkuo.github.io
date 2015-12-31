@@ -7,7 +7,7 @@ map.featureLayer.on('click', function(e) {
     map.panTo(e.layer.getLatLng());
 });
 
-var myLayer = L.mapbox.featureLayer().addTo(map);
+//var myLayer = L.mapbox.featureLayer().addTo(map);
 
 //Watch out the coordinates! Different order!
 
@@ -66,6 +66,20 @@ var geoJson = [{
         "marker-color": "#ff8888",
         "marker-size": "large",
         "sight": "主恩牧場"
+    }
+}, {
+    type: 'Feature',
+    "geometry": {
+        "type": "Point",
+        "coordinates": [120.484253, 23.465489]
+    },
+    "properties": {
+        "image": "img/twnMilkMap/ncyu.jpg",
+        "url": "http://www.ncyu.edu.tw/zoo/content.aspx?site_content_sn=16853",
+        "marker-symbol": "slaughterhouse",
+        "marker-color": "#ff8888",
+        "marker-size": "large",
+        "sight": "嘉義大學鮮奶"
     }
 }];
 
