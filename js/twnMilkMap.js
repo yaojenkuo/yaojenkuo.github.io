@@ -1,13 +1,13 @@
 L.mapbox.accessToken = 'pk.eyJ1IjoidG9ueWt1b3lqIiwiYSI6ImNpZnJ2cjV1bjB4YzNzMm0wcXE4a2ZhaTIifQ.ZH43M-eU67KjPAM3w__IvQ';
 var map = L.mapbox.map('map', 'mapbox.streets')
-    .setView([24.362, 120.3], 7);
+    .setView([24.362, 120.3], 8);
+
+var myLayer = L.mapbox.featureLayer().addTo(map);
 
 //Centering markers
 map.featureLayer.on('click', function(e) {
     map.panTo(e.layer.getLatLng());
 });
-
-//var myLayer = L.mapbox.featureLayer().addTo(map);
 
 //Watch out the coordinates! Different order!
 
@@ -80,6 +80,34 @@ var geoJson = [{
         "marker-color": "#ff8888",
         "marker-size": "large",
         "sight": "嘉義大學鮮奶"
+    }
+}, {
+    type: 'Feature',
+    "geometry": {
+        "type": "Point",
+        "coordinates": [120.313086, 23.269206]
+    },
+    "properties": {
+        "image": "img/twnMilkMap/tainan.jpg",
+        "url": "http://www.tainandairy.com/",
+        "marker-symbol": "slaughterhouse",
+        "marker-color": "#ff8888",
+        "marker-size": "large",
+        "sight": "柳營鮮乳"
+    }
+}, {
+    type: 'Feature',
+    "geometry": {
+        "type": "Point",
+        "coordinates": [120.310670, 22.638919]
+    },
+    "properties": {
+        "image": "img/twnMilkMap/kao.jpg",
+        "url": "http://www.highmilk.com/",
+        "marker-symbol": "slaughterhouse",
+        "marker-color": "#ff8888",
+        "marker-size": "large",
+        "sight": "高大鮮乳"
     }
 }];
 
