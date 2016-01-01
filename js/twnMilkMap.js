@@ -83,7 +83,7 @@ var geoJson = [{
         "coordinates": [120.313086, 23.269206]
     },
     "properties": {
-        "image": "img/twnMilkMap/tainan.jpg",
+        "image": "img/twnMilkMap/tainan.png",
         "url": "http://www.tainandairy.com/",
         "marker-symbol": "slaughterhouse",
         "marker-color": "#ff8888",
@@ -145,6 +145,216 @@ var geoJson = [{
         "marker-color": "#ff8888",
         "marker-size": "large",
         "sight": "吉蒸鮮乳"
+    }
+}, {
+    type: 'Feature',
+    "geometry": {
+        "type": "Point",
+        "coordinates": [120.318924, 22.654762]
+    },
+    "properties": {
+        "image": "img/twnMilkMap/kaohsiung.jpg",
+        "url": "https://www.facebook.com/GaoXiongMuChang",
+        "marker-symbol": "slaughterhouse",
+        "marker-color": "#ff8888",
+        "marker-size": "large",
+        "sight": "高雄牧場鮮乳"
+    }
+}, {
+    type: 'Feature',
+    "geometry": {
+        "type": "Point",
+        "coordinates": [121.230291, 25.029197]
+    },
+    "properties": {
+        "image": "img/twnMilkMap/baotsung.jpg",
+        "url": "https://www.facebook.com/pages/%E7%94%B0%E5%AA%BD%E5%AA%BD%E5%AF%B6%E8%81%B0%E4%B9%B3%E7%89%9B%E7%89%A7%E5%A0%B4/138818819529715",
+        "marker-symbol": "slaughterhouse",
+        "marker-color": "#ff8888",
+        "marker-size": "large",
+        "sight": "寶聰牧場鮮乳"
+    }
+}, {
+    type: 'Feature',
+    "geometry": {
+        "type": "Point",
+        "coordinates": [120.932194, 24.761646]
+    },
+    "properties": {
+        "image": "img/twnMilkMap/championship.jpg",
+        "url": "http://eshop1378.hiwinner.tw/",
+        "marker-symbol": "slaughterhouse",
+        "marker-color": "#ff8888",
+        "marker-size": "large",
+        "sight": "進士牧場鮮乳"
+    }
+}, {
+    type: 'Feature',
+    "geometry": {
+        "type": "Point",
+        "coordinates": [120.741315, 24.441526]
+    },
+    "properties": {
+        "image": "img/twnMilkMap/flyingcow.jpg",
+        "url": "http://www.flyingcow.com.tw/",
+        "marker-symbol": "slaughterhouse",
+        "marker-color": "#ff8888",
+        "marker-size": "large",
+        "sight": "飛牛牧場鮮乳"
+    }
+}, {
+    type: 'Feature',
+    "geometry": {
+        "type": "Point",
+        "coordinates": [120.711669, 24.078586]
+    },
+    "properties": {
+        "image": "img/twnMilkMap/nchu.jpg",
+        "url": "http://recruit.nchu.edu.tw/present/learn-resource/learn-resources01-07.aspx",
+        "marker-symbol": "slaughterhouse",
+        "marker-color": "#ff8888",
+        "marker-size": "large",
+        "sight": "中興大學牧場鮮乳"
+    }
+}, {
+    type: 'Feature',
+    "geometry": {
+        "type": "Point",
+        "coordinates": [120.453887, 23.476640]
+    },
+    "properties": {
+        "image": "img/twnMilkMap/daddy.jpg",
+        "url": "https://www.facebook.com/BestMilkofficial",
+        "marker-symbol": "slaughterhouse",
+        "marker-color": "#ff8888",
+        "marker-size": "large",
+        "sight": "老爹鮮乳"
+    }
+}, {
+    type: 'Feature',
+    "geometry": {
+        "type": "Point",
+        "coordinates": [120.549359, 23.415141]
+    },
+    "properties": {
+        "image": "img/twnMilkMap/dgc.jpg",
+        "url": "http://www.dgc.com.tw/",
+        "marker-symbol": "slaughterhouse",
+        "marker-color": "#ff8888",
+        "marker-size": "large",
+        "sight": "獨角仙牧場鮮乳"
+    }
+}, {
+    type: 'Feature',
+    "geometry": {
+        "type": "Point",
+        "coordinates": [120.406766, 23.473293]
+    },
+    "properties": {
+        "image": "img/twnMilkMap/jain.jpg",
+        "url": "https://www.facebook.com/jian2356881",
+        "marker-symbol": "slaughterhouse",
+        "marker-color": "#ff8888",
+        "marker-size": "large",
+        "sight": "健成牧場鮮乳"
+    }
+}, {
+    type: 'Feature',
+    "geometry": {
+        "type": "Point",
+        "coordinates": [120.312079, 23.313461]
+    },
+    "properties": {
+        "image": "img/twnMilkMap/5M.jpg",
+        "url": "https://www.facebook.com/5milk",
+        "marker-symbol": "slaughterhouse",
+        "marker-color": "#ff8888",
+        "marker-size": "large",
+        "sight": "五梅牧場鮮乳"
+    }
+}, {
+    type: 'Feature',
+    "geometry": {
+        "type": "Point",
+        "coordinates": [121.085006, 22.817437]
+    },
+    "properties": {
+        "image": "img/twnMilkMap/binlang.jpg",
+        "url": "https://www.facebook.com/pages/%E5%8F%B0%E6%9D%B1%E5%8D%91%E5%8D%97%E9%84%89%E8%B3%93%E6%9C%97%E7%89%A7%E5%A0%B4/396781390389371",
+        "marker-symbol": "slaughterhouse",
+        "marker-color": "#ff8888",
+        "marker-size": "large",
+        "sight": "賓朗牧場鮮乳"
+    }
+}, {
+    type: 'Feature',
+    "geometry": {
+        "type": "Point",
+        "coordinates": [120.609292, 22.644439]
+    },
+    "properties": {
+        "image": "img/twnMilkMap/npust.jpg",
+        "url": "http://mportal.npust.edu.tw/bin/home.php",
+        "marker-symbol": "slaughterhouse",
+        "marker-color": "#ff8888",
+        "marker-size": "large",
+        "sight": "屏科大牧場鮮乳"
+    }
+}, {
+    type: 'Feature',
+    "geometry": {
+        "type": "Point",
+        "coordinates": [118.438589, 24.433766]
+    },
+    "properties": {
+        "image": "img/twnMilkMap/kinmen.jpg",
+        "url": "http://tour.kinmen.gov.tw/chinese/CP.aspx?sn=397",
+        "marker-symbol": "slaughterhouse",
+        "marker-color": "#ff8888",
+        "marker-size": "large",
+        "sight": "金門畜試所-青草地鮮乳"
+    }
+}, {
+    type: 'Feature',
+    "geometry": {
+        "type": "Point",
+        "coordinates": [120.299550, 23.574038]
+    },
+    "properties": {
+        "image": "img/twnMilkMap/mingchuan.jpg",
+        "url": "https://www.facebook.com/NiuNaiJueDingLeJianKangNiuNiuBing",
+        "marker-symbol": "slaughterhouse",
+        "marker-color": "#ff8888",
+        "marker-size": "large",
+        "sight": "明全牧場鮮乳"
+    }
+}, {
+    type: 'Feature',
+    "geometry": {
+        "type": "Point",
+        "coordinates": [120.167749, 23.164736]
+    },
+    "properties": {
+        "image": "img/twnMilkMap/hehsiang.jpg",
+        "url": "https://www.facebook.com/FengXiHong",
+        "marker-symbol": "slaughterhouse",
+        "marker-color": "#ff8888",
+        "marker-size": "large",
+        "sight": "禾香牧場鮮乳"
+    }
+}, {
+    type: 'Feature',
+    "geometry": {
+        "type": "Point",
+        "coordinates": [120.288092, 22.742025]
+    },
+    "properties": {
+        "image": "img/twnMilkMap/newlife.jpg",
+        "url": "http://newlife6118758.com",
+        "marker-symbol": "slaughterhouse",
+        "marker-color": "#ff8888",
+        "marker-size": "large",
+        "sight": "新生活鮮乳"
     }
 }];
 
