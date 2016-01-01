@@ -13,12 +13,12 @@ var geoJson = [{
         "coordinates": [121.541399, 25.015274]
     },
     "properties": {
-        "image": "img/twnMilkMap/ntuMilk.jpg",
+        "image": "img/twnMilkMap/ntu.jpg",
         "url": "http://www.bioagri.ntu.edu.tw/farm/ntufarm/unit4/index4.htm",
         "marker-symbol": "slaughterhouse",
         "marker-color": "#ff8888",
         "marker-size": "large",
-        "sight": "台灣大學牧場"
+        "sight": "台灣大學牧場鮮乳"
     }
 }, {
     type: 'Feature',
@@ -32,7 +32,7 @@ var geoJson = [{
         "marker-symbol": "slaughterhouse",
         "marker-color": "#ff8888",
         "marker-size": "large",
-        "sight": "四方鮮乳生態牧場"
+        "sight": "生態牧場四方鮮乳"
     }
 }, {
     type: 'Feature',
@@ -46,7 +46,7 @@ var geoJson = [{
         "marker-symbol": "slaughterhouse",
         "marker-color": "#ff8888",
         "marker-size": "large",
-        "sight": "東海大學實習農牧場"
+        "sight": "東海大學實習農牧場鮮乳"
     }
 }, {
     type: 'Feature',
@@ -60,7 +60,7 @@ var geoJson = [{
         "marker-symbol": "slaughterhouse",
         "marker-color": "#ff8888",
         "marker-size": "large",
-        "sight": "主恩牧場"
+        "sight": "主恩牧場鮮乳"
     }
 }, {
     type: 'Feature',
@@ -74,7 +74,7 @@ var geoJson = [{
         "marker-symbol": "slaughterhouse",
         "marker-color": "#ff8888",
         "marker-size": "large",
-        "sight": "嘉義大學鮮奶"
+        "sight": "嘉義大學鮮乳"
     }
 }, {
     type: 'Feature',
@@ -251,7 +251,7 @@ var geoJson = [{
         "coordinates": [120.406766, 23.473293]
     },
     "properties": {
-        "image": "img/twnMilkMap/jain.jpg",
+        "image": "img/twnMilkMap/jian.jpg",
         "url": "https://www.facebook.com/jian2356881",
         "marker-symbol": "slaughterhouse",
         "marker-color": "#ff8888",
