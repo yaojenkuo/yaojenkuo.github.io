@@ -265,7 +265,7 @@ var geoJson = [{
         "coordinates": [120.312079, 23.313461]
     },
     "properties": {
-        "image": "img/twnMilkMap/5m.jpg",
+        "image": "img/twnMilkMap/wumay.jpg",
         "url": "https://www.facebook.com/5milk",
         "marker-symbol": "slaughterhouse",
         "marker-color": "#ff8888",
