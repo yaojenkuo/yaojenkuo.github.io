@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+    <title>Selection Function Chain</title>
+    <link rel="stylesheet" type="text/css" href="../css/d3/d3styles.css"/>
+    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+
+<!--No body contents, totally rely on script -->
+
+<script type="text/javascript">
+	var body = d3.select("body");
+
+	body.append("section")
+		.attr("id", "section1")
+		.append("div")
+		.attr("class", "blue box")
+		.append("p")
+		.text("dynamic blue box");
+
+	body.append("section")
+		.attr("id", "section2")
+		.append("div")
+		.attr("class", "red box")
+		.append("p")
+		.text("dynamic red box");
+</script>
+
+</body>
+</html>
