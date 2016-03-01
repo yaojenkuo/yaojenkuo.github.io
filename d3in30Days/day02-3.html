@@ -3,31 +3,31 @@
 <head>
 <meta charset="utf-8">
 
-    <title>Sub Selection</title>
+    <title>Selection Function Chain</title>
     <link rel="stylesheet" type="text/css" href="../css/d3/d3styles.css"/>
     <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
 </head>
 
 <body>
 
-<section id="section1">
-	<div>
-		<p>blue box</p>
-	</div>
-</section>
-
-<section id="section2">
-	<div>
-		<p>red box</p>
-	</div>
-</section>
+// no body contents, totally rely on script!
 
 <script type="text/javascript">
-	d3.select("#section1 > div")
-		.attr("class", "blue box");
+	var body = d3.select("body");
 
-	d3.select("#section2 > div")
-		.attr("class", "red box");
+	body.append("section")
+		.attr("id", "section1")
+		.append("div")
+		.attr("class", "blue box")
+		.append("p")
+		.text("dynamic blue box");
+
+	body.append("section")
+		.attr("id", "section2")
+		.append("div")
+		.attr("class", "red box")
+		.append("p")
+		.text("dynamic red box");
 </script>
 
 </body>
