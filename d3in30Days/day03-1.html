@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+    <title>Raw Selection</title>
+    <link rel="stylesheet" type="text/css" href="../css/d3/d3styles.css"/>
+    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+
+<!--No body contents-->
+
+<script type="text/javascript">
+	var dataBarchart = [10, 15, 30, 50, 80, 65, 55, 30, 20, 10, 8];
+
+	function render(dataBarchart){
+		// Entering
+		d3.select("body").selectAll("div.h-bar")
+			.data(dataBarchart)
+			.enter() //Enter
+			.append("div")
+			.attr("class", "h-bar").append("span");
+
+		// Updating
+		d3.select("body").selectAll("div.h-bar")
+			.data(dataBarchart)
+			.style("width", function(d){
+				return (d*3) + "px";
+			})
+			.select("span")
+			.text(function(d){
+				return d;
+			});
+		// Exit
+		d3.select("body").selectAll("div.h-bar")
+			.data(dataBarchart)
+			.exit()
+				.remove();
+	}
+
+	setInterval(function (){
+		dataBarchart.shift();
+		dataBarchart.push(Math.round(Math.random()*100));
+		render(dataBarchart);
+	}, 1500);
+	render(dataBarchart);
+</script>
+
+</body>
+</html>
