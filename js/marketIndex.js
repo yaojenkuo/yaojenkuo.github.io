@@ -14,7 +14,7 @@ var geoJson = [{
     },
     "properties": {
         "marker-symbol": "embassy",
-        "marker-color": "#ff8888",
+        "marker-color": "#ff0000",
         "marker-size": "large",
         "indexDate": "2016/03/02",
         "indexName": "美國紐約道瓊工業指數",
@@ -28,7 +28,7 @@ var geoJson = [{
     },
     "properties": {
         "marker-symbol": "embassy",
-        "marker-color": "#ff8888",
+        "marker-color": "#ff0000",
         "marker-size": "large",
         "indexDate": "2016/03/02",
         "indexName": "日本東京日經225指數",
@@ -41,8 +41,8 @@ var geoJson = [{
         "coordinates": [114.177272, 22.280260]
     },
     "properties": {
-        "marker-symbol": "embassy",
-        "marker-color": "#ff8888",
+        "marker-symbol": "roadblock",
+        "marker-color": "#009933",
         "marker-size": "large",
         "indexDate": "2016/03/02",
         "indexName": "香港恆生指數",
@@ -56,7 +56,7 @@ var geoJson = [{
     },
     "properties": {
         "marker-symbol": "embassy",
-        "marker-color": "#ff8888",
+        "marker-color": "#ff0000",
         "marker-size": "large",
         "indexDate": "2016/03/02",
         "indexName": "法國巴黎CAC 40指數",
@@ -69,8 +69,8 @@ var geoJson = [{
         "coordinates": [-0.133219, 51.534288]
     },
     "properties": {
-        "marker-symbol": "embassy",
-        "marker-color": "#ff8888",
+        "marker-symbol": "roadblock",
+        "marker-color": "#009933",
         "marker-size": "large",
         "indexDate": "2016/03/02",
         "indexName": "英國倫敦金融時報一百種股價指數",
@@ -83,8 +83,8 @@ var geoJson = [{
         "coordinates": [120.9162592, 31.2243084]
     },
     "properties": {
-        "marker-symbol": "embassy",
-        "marker-color": "#ff8888",
+        "marker-symbol": "roadblock",
+        "marker-color": "#009933",
         "marker-size": "large",
         "indexDate": "2016/03/02",
         "indexName": "中國上海A股指數",
@@ -98,7 +98,7 @@ var geoJson = [{
     },
     "properties": {
         "marker-symbol": "embassy",
-        "marker-color": "#ff8888",
+        "marker-color": "#ff0000",
         "marker-size": "large",
         "indexDate": "2016/03/02",
         "indexName": "新加坡富時海峽時報指數",
@@ -112,7 +112,7 @@ var geoJson = [{
     },
     "properties": {
         "marker-symbol": "embassy",
-        "marker-color": "#ff8888",
+        "marker-color": "#ff0000",
         "marker-size": "large",
         "indexDate": "2016/03/02",
         "indexName": "德國DAX指數",
@@ -125,8 +125,8 @@ var geoJson = [{
         "coordinates": [100.497102, 13.767129]
     },
     "properties": {
-        "marker-symbol": "embassy",
-        "marker-color": "#ff8888",
+        "marker-symbol": "roadblock",
+        "marker-color": "#009933",
         "marker-size": "large",
         "indexDate": "2016/03/02",
         "indexName": "泰國曼谷SET股價指數",
@@ -140,7 +140,7 @@ var geoJson = [{
     },
     "properties": {
         "marker-symbol": "embassy",
-        "marker-color": "#ff8888",
+        "marker-color": "#ff0000",
         "marker-size": "large",
         "indexDate": "2016/03/02",
         "indexName": "菲律賓馬尼拉綜合股價指數",
@@ -153,8 +153,8 @@ var geoJson = [{
         "coordinates": [126.986792, 37.547054]
     },
     "properties": {
-        "marker-symbol": "embassy",
-        "marker-color": "#ff8888",
+        "marker-symbol": "roadblock",
+        "marker-color": "#009933",
         "marker-size": "large",
         "indexDate": "2016/03/02",
         "indexName": "韓國綜合股價指數",
