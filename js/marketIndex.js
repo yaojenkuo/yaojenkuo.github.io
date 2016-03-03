@@ -10,7 +10,7 @@ var geoJson = [{
     type: 'Feature',
     "geometry": {
         "type": "Point",
-        "coordinates": [-74.003, 40.718]
+        "coordinates": [-73.998636, 40.720405]
     },
     "properties": {
         "marker-symbol": "town-hall",
