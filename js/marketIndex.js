@@ -16,6 +16,7 @@ var geoJson = [{
         "marker-symbol": "embassy",
         "marker-color": "#ff8888",
         "marker-size": "large",
+        "indexDate": "2016/03/02",
         "indexName": "美國紐約道瓊工業指數",
         "indexValue": 16865.08
     }
@@ -29,6 +30,7 @@ var geoJson = [{
         "marker-symbol": "embassy",
         "marker-color": "#ff8888",
         "marker-size": "large",
+        "indexDate": "2016/03/02",
         "indexName": "日本東京日經225指數",
         "indexValue": 16085.51
     }
@@ -42,6 +44,7 @@ var geoJson = [{
         "marker-symbol": "embassy",
         "marker-color": "#ff8888",
         "marker-size": "large",
+        "indexDate": "2016/03/02",
         "indexName": "香港恆生指數",
         "indexValue": 19407.46
     }
@@ -55,6 +58,7 @@ var geoJson = [{
         "marker-symbol": "embassy",
         "marker-color": "#ff8888",
         "marker-size": "large",
+        "indexDate": "2016/03/02",
         "indexName": "法國巴黎CAC 40指數",
         "indexValue": 4406.84
     }
@@ -68,6 +72,7 @@ var geoJson = [{
         "marker-symbol": "embassy",
         "marker-color": "#ff8888",
         "marker-size": "large",
+        "indexDate": "2016/03/02",
         "indexName": "英國倫敦金融時報一百種股價指數",
         "indexValue": 6152.88
     }
@@ -81,8 +86,79 @@ var geoJson = [{
         "marker-symbol": "embassy",
         "marker-color": "#ff8888",
         "marker-size": "large",
+        "indexDate": "2016/03/02",
         "indexName": "中國上海A股指數",
         "indexValue": 2982.09
+    }
+}, {
+    type: 'Feature',
+    "geometry": {
+        "type": "Point",
+        "coordinates": [103.862799, 1.353169]
+    },
+    "properties": {
+        "marker-symbol": "embassy",
+        "marker-color": "#ff8888",
+        "marker-size": "large",
+        "indexDate": "2016/03/02",
+        "indexName": "新加坡富時海峽時報指數",
+        "indexValue": 2682.39
+    }
+}, {
+    type: 'Feature',
+    "geometry": {
+        "type": "Point",
+        "coordinates": [10.360741, 51.078159]
+    },
+    "properties": {
+        "marker-symbol": "embassy",
+        "marker-color": "#ff8888",
+        "marker-size": "large",
+        "indexDate": "2016/03/02",
+        "indexName": "德國DAX指數",
+        "indexValue": 9717.16
+    }
+}, {
+    type: 'Feature',
+    "geometry": {
+        "type": "Point",
+        "coordinates": [100.497102, 13.767129]
+    },
+    "properties": {
+        "marker-symbol": "embassy",
+        "marker-color": "#ff8888",
+        "marker-size": "large",
+        "indexDate": "2016/03/02",
+        "indexName": "泰國曼谷SET股價指數",
+        "indexValue": 1346.95
+    }
+}, {
+    type: 'Feature',
+    "geometry": {
+        "type": "Point",
+        "coordinates": [120.985144, 14.599232]
+    },
+    "properties": {
+        "marker-symbol": "embassy",
+        "marker-color": "#ff8888",
+        "marker-size": "large",
+        "indexDate": "2016/03/02",
+        "indexName": "菲律賓馬尼拉綜合股價指數",
+        "indexValue": 6729.53
+    }
+}, {
+    type: 'Feature',
+    "geometry": {
+        "type": "Point",
+        "coordinates": [126.986792, 37.547054]
+    },
+    "properties": {
+        "marker-symbol": "embassy",
+        "marker-color": "#ff8888",
+        "marker-size": "large",
+        "indexDate": "2016/03/02",
+        "indexName": "韓國綜合股價指數",
+        "indexValue": 1944.51
     }
 }];
 
@@ -92,12 +168,12 @@ myLayer.on('layeradd', function(e) {
         feature = marker.feature;
 
     // Create custom popup content
-    var popupContent = feature.properties.indexName + '<br>' + feature.properties.indexValue;
+    var popupContent = feature.properties.indexDate + '<br>' + feature.properties.indexName + ' : ' + feature.properties.indexValue;
 
     // http://leafletjs.com/reference.html#popup
     marker.bindPopup(popupContent, {
         closeButton: false,
-        minWidth: 200
+        minWidth: 150
     });
 });
 
