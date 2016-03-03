@@ -13,9 +13,9 @@ var geoJson = [{
         "coordinates": [-73.998636, 40.720405]
     },
     "properties": {
-        "marker-symbol": "town-hall",
-        //"marker-color": "#ff8888",
-        //"marker-size": "large",
+        "marker-symbol": "embassy",
+        "marker-color": "#ff8888",
+        "marker-size": "large",
         "indexName": "美國紐約道瓊工業指數",
         "indexValue": 16865.08
     }
@@ -26,7 +26,7 @@ var geoJson = [{
         "coordinates": [139.732349, 35.710068], 
     },
     "properties": {
-        "marker-symbol": "town-hall",
+        "marker-symbol": "embassy",
         "marker-color": "#ff8888",
         "marker-size": "large",
         "indexName": "日本東京日經225指數",
@@ -39,7 +39,7 @@ var geoJson = [{
         "coordinates": [114.177272, 22.280260]
     },
     "properties": {
-        "marker-symbol": "town-hall",
+        "marker-symbol": "embassy",
         "marker-color": "#ff8888",
         "marker-size": "large",
         "indexName": "香港恆生指數",
@@ -52,7 +52,7 @@ var geoJson = [{
         "coordinates": [2.351674, 48.857708]
     },
     "properties": {
-        "marker-symbol": "town-hall",
+        "marker-symbol": "embassy",
         "marker-color": "#ff8888",
         "marker-size": "large",
         "indexName": "法國巴黎CAC 40指數",
@@ -65,11 +65,24 @@ var geoJson = [{
         "coordinates": [-0.133219, 51.534288]
     },
     "properties": {
-        "marker-symbol": "town-hall",
+        "marker-symbol": "embassy",
         "marker-color": "#ff8888",
         "marker-size": "large",
         "indexName": "英國倫敦金融時報一百種股價指數",
         "indexValue": 6152.88
+    }
+}, {
+    type: 'Feature',
+    "geometry": {
+        "type": "Point",
+        "coordinates": [120.9162592, 31.2243084]
+    },
+    "properties": {
+        "marker-symbol": "embassy",
+        "marker-color": "#ff8888",
+        "marker-size": "large",
+        "indexName": "中國上海A股指數",
+        "indexValue": 2982.09
     }
 }];
 
