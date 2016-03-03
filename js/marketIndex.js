@@ -10,7 +10,7 @@ var geoJson = [{
     type: 'Feature',
     "geometry": {
         "type": "Point",
-        "coordinates": [40.718, -74.003]
+        "coordinates": [-74.003, 40.718]
     },
     "properties": {
         "marker-symbol": "town-hall",
@@ -84,9 +84,14 @@ myLayer.on('layeradd', function(e) {
     // http://leafletjs.com/reference.html#popup
     marker.bindPopup(popupContent, {
         closeButton: false,
-        minWidth: 320
+        minWidth: 200
     });
 });
 
 // Add features to the map
 myLayer.setGeoJSON(geoJson);
+
+//Centering markers
+myLayer.on('click', function(e) {
+    map.panTo(e.layer.getLatLng());
+});
