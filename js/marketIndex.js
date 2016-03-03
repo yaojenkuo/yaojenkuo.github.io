@@ -1,6 +1,6 @@
 L.mapbox.accessToken = 'pk.eyJ1IjoidG9ueWt1b3lqIiwiYSI6ImNpZnJ2cjV1bjB4YzNzMm0wcXE4a2ZhaTIifQ.ZH43M-eU67KjPAM3w__IvQ';
 var map = L.mapbox.map('map', 'mapbox.streets')
-    .setView([50.848, -52.734], 2);
+    .setView([47.398, 3.867], 2);
 
 var myLayer = L.mapbox.featureLayer().addTo(map);
 
