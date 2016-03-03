@@ -1,6 +1,6 @@
 L.mapbox.accessToken = 'pk.eyJ1IjoidG9ueWt1b3lqIiwiYSI6ImNpZnJ2cjV1bjB4YzNzMm0wcXE4a2ZhaTIifQ.ZH43M-eU67KjPAM3w__IvQ';
 var map = L.mapbox.map('map', 'mapbox.streets')
-    .setView([40.718, -74.003], 6);
+    .setView([50.848, -52.734], 2);
 
 var myLayer = L.mapbox.featureLayer().addTo(map);
 
@@ -79,7 +79,7 @@ myLayer.on('layeradd', function(e) {
         feature = marker.feature;
 
     // Create custom popup content
-    var popupContent = features.properties.indexName + '<br>' + features.properties.indexValue;
+    var popupContent = feature.properties.indexName + '<br>' + feature.properties.indexValue;
 
     // http://leafletjs.com/reference.html#popup
     marker.bindPopup(popupContent, {
