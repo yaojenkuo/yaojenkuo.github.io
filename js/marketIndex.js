@@ -160,6 +160,34 @@ var geoJson = [{
         "indexName": "韓國綜合股價指數",
         "indexValue": 1944.51
     }
+}, {
+    type: 'Feature',
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-75.160616, 39.950999]
+    },
+    "properties": {
+        "marker-symbol": "roadblock",
+        "marker-color": "#009933",
+        "marker-size": "large",
+        "indexDate": "2016/03/02",
+        "indexName": "美國費城半導體指數",
+        "indexValue": 639.9
+    }
+}, {
+    type: 'Feature',
+    "geometry": {
+        "type": "Point",
+        "coordinates": [72.875698, 19.073762]
+    },
+    "properties": {
+        "marker-symbol": "embassy",
+        "marker-color": "#ff0000",
+        "marker-size": "large",
+        "indexDate": "2016/03/02",
+        "indexName": "印度孟買500股價指數",
+        "indexValue": 9499.91
+    }
 }];
 
 // Add custom popups to each using our custom feature properties
