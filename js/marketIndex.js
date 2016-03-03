@@ -14,8 +14,8 @@ var geoJson = [{
     },
     "properties": {
         "marker-symbol": "town-hall",
-        "marker-color": "#ff8888",
-        "marker-size": "large",
+        //"marker-color": "#ff8888",
+        //"marker-size": "large",
         "indexName": "美國紐約道瓊工業指數",
         "indexValue": 16865.08
     }
