@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Summation</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1>Sum of all arguments:</h1>
+		<p id="demo"></p>
+	</div>
+	<script>
+		function sumAll(){
+			var i = 0;
+			var sum = 0;
+			for (i=0; i<arguments.length; i++){
+				sum+=arguments[i];
+			}
+			return sum;
+		}
+		document.getElementById("demo").innerHTML = sumAll(1, 123, 66, 52, 689);
+	</script>
+</body>
+</html>
