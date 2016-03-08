@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Function as Method</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1>myObject.fullName() will return Stephon Curry:</h1>
+		<p id="demo"></p>
+	</div>
+	<script>
+		var myObject = {
+			firstName: 'Stephon',
+			lastName: 'Curry',
+			fullName: function(){
+				return this.firstName + ' ' + this.lastName;
+			}
+		};
+		document.getElementById("demo").innerHTML = myObject.fullName();
+	</script>
+</body>
+</html>
