@@ -42,13 +42,14 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'cwTeXHei', 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
 p {
     margin-bottom: 20px;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 2;
+    font-family: 'cwTeXHei';
 }
 
 .bg-primary {
