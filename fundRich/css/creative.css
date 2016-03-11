@@ -181,6 +181,7 @@ header .header-content {
     width: 100%;
     padding: 100px 15px;
     text-align: center;
+    font-family: 'cwTeXHei';
 }
 
 header .header-content .header-content-inner h1 {
