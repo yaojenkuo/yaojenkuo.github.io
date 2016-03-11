@@ -474,3 +474,8 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #222;
 }
+
+.about-box {
+    margin: 50px auto 0;
+    max-width: 400px;
+}
