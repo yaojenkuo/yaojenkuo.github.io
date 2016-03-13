@@ -594,15 +594,15 @@ body {
 .carousel-control.right,
 .carousel-control.left {
   background-image: none;
-  color: #000000;
+  color: #FFFFFF;
 }
 
 .carousel-indicators li {
-  border-color: #000000;
+  border-color: #FFFFFF;
 }
 
 .carousel-indicators li.active {
-  background-color: #000000;
+  background-color: #FFFFFF;
 }
 
 .item h4 {
