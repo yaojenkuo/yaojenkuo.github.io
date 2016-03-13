@@ -45,10 +45,20 @@
   // Initialize WOW.js Scrolling Animations
   new WOW().init();
 
-  //
+  // Slider.js
   $('#sliderAsset').slider({
     formatter: function(value) {
-      return 'Current value: ' + value;
+      return '$ ' + value;
+    }
+  });
+  $('#sliderLiability').slider({
+    formatter: function(value) {
+      return '$ ' + value;
+    }
+  });
+  $('#sliderAnnual').slider({
+    formatter: function(value) {
+      return '$ ' + value;
     }
   });
 
