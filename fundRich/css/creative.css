@@ -578,3 +578,7 @@ body {
   display: none;
   opacity: 0;
 }
+
+#sliderAsset .slider-selection {
+  background: #BABABA;
+}
