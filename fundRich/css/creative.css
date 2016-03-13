@@ -583,25 +583,32 @@ body {
   background: #BABABA;
 }
 
+#sliderLiability .slider-selection {
+  background: #BABABA;
+}
+
+#sliderAnnual .slider-selection {
+  background: #BABABA;
+}
+
 .carousel-control.right,
 .carousel-control.left {
   background-image: none;
-  color: #f4511e;
+  color: #000000;
 }
 
 .carousel-indicators li {
-  border-color: #f4511e;
+  border-color: #000000;
 }
 
 .carousel-indicators li.active {
-  background-color: #f4511e;
+  background-color: #000000;
 }
 
 .item h4 {
   font-size: 19px;
   line-height: 1.375em;
   font-weight: 400;
-  font-style: italic;
   margin: 70px 0;
 }
 
