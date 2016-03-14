@@ -617,5 +617,9 @@ body {
 }
 
 #map {
-    height: 360px;
+    height: 500px;
+}
+
+.leaflet-popup-content img {
+    max-width: 100%;
 }
