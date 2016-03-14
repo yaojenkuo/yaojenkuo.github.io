@@ -17,6 +17,9 @@
     <!-- Plugin CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/6.1.5/css/bootstrap-slider.min.css" type="text/css">
     <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="leaflet/leaflet.css">
+    <link href='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/marketIndex.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/creative.css" type="text/css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -126,7 +129,7 @@
             <div class="row">
                 <div class="col-sm-4 portfolio-item">
                     <div class="text-center">
-                        <h3>國際輿情分析</h3>
+                        <h3>經濟指標分析</h3>
                     </div>
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
@@ -420,12 +423,11 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>國際輿情分析</h2>
+                            <h2>經濟指標分析</h2>
                             <hr class="star-primary">
-                            <div class="embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/WKJxOnpXCVY"></iframe>
-                            </div>
-                            <p>一個國際輿情分析的demo影片</p>
+                            <div id="mapid"></div>
+                            <img src="img/portfolio/marketIndex.PNG" alt="">
+                            <p>經濟指標分析的demo</p>
                             <ul class="list-inline item-details">
                                 <li>Powered by:
                                     <strong><a href="http://www.sas.com">SAS&reg; Crawler and Text Mining</a>
@@ -656,8 +658,11 @@
     <script src="js/jquery.fittext.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/6.1.5/bootstrap-slider.min.js"></script>
+    <script src="leaflet/leaflet.js"></script>
+    <script src='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.js'></script>
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
+    <script src='../js/marketIndex.js'></script>
 </body>
 
 </html>

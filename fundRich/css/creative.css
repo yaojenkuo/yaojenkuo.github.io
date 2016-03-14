@@ -615,3 +615,7 @@ body {
 .item span {
     font-style: normal;
 }
+
+#mapid {
+    height: 180px;
+}
