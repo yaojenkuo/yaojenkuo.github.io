@@ -37,7 +37,3 @@
 .activeDrag .ghostCircle {
   display: none;
 }
-
-#tree-container {
-  height: 300px;
-}
