@@ -1,103 +1,14 @@
 {
     "name": "Programming Languages",
     "children": [{
-        "name": "Web",
-        "children": [{
-            "name": "Front-End",
-            "children": [{
-                "name": "HTML",
-                "size": 1234
-            }, {
-                "name": "CSS",
-                "size": 1234
-            }, {
-                "name": "JavaScript",
-                "children": [{
-                    "name": "jQuery",
-                    "size": 1234
-                }, {
-                    "name": "D3",
-                    "size": 1234
-                }]
-            }]
-        }, {
-            "name": "Back-End",
-            "children": [{
-                "name": "Ruby on Rails",
-                "size": 1234
-            }, {
-                "name": "Node.js",
-                "size": 1234
-            }, {
-                "name": "Django",
-                "size": 1234
-            }, {
-                "name": "ASP.NET",
-                "size": 1234
-            }, {
-                "name": "PHP",
-                "size": 1234
-            }, {
-                "name": "Java",
-                "size": 1234
-            }]
-        }]
+        "name": "Web"
     }, {
-        "name": "PC",
-        "children": [{
-            "name": "C#",
-            "size": 1234
-        }, {
-            "name": "C++",
-            "size": 1234
-        }, {
-            "name": "Java",
-            "size": 1234
-        }]
+        "name": "PC"
     }, {
-        "name": "Mobile",
-        "children": [{
-            "name": "Android",
-            "children": [{
-                "name": "Java",
-                "size": 1234
-            }, {
-                "name": "C++",
-                "size": 1234
-            }]
-        }, {
-            "name": "iOS",
-            "children": [{
-                "name": "ObjectiveC",
-                "size": 1234
-            }, {
-                "name": "Swift",
-                "size": 1234
-            }]
-        }]
+        "name": "Mobile"
     }, {
-        "name": "Firmware",
-        "children": [{
-            "name": "8051",
-            "children": [{
-                "name": "C",
-                "size": 1234
-            }]
-        }, {
-            "name": "ARM-based",
-            "children": [{
-                "name": "C++",
-                "size": 1234
-            }]
-        }]
+        "name": "Firmware"
     }, {
-        "name": "Data Analysis",
-        "children": [{
-            "name": "R",
-            "size": 1234
-        }, {
-            "name": "Python",
-            "size": 1234
-        }]
+        "name": "Data Analysis"
     }]
 }
