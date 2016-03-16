@@ -2,35 +2,39 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Script Tree</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <!--Custom CSS-->
-  <link rel="stylesheet" href="scriptTree.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Script Tree</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="scriptTree.css">
 </head>
 
 <body>
-  <div class="container">
-    <div class="row">
-      <h1>Re: [請益] 想當程式設計師的最低門檻</h1>
-      <h3>banyhong</h3>
-      <h3>Wed Dec  2 13:47:20 2015</h3>
-      <h3>批踢踢實業坊 看版Soft_Job</h3>
-      <p><a href="https://www.ptt.cc/bbs/Soft_Job/M.1449035242.A.AAC.html">原文連結</a></p>
+    <div class="container">
+        <div class="row">
+            <h1>Re: [請益] 想當程式設計師的最低門檻</h1>
+            <h3>banyhong</h3>
+            <h3>Wed Dec  2 13:47:20 2015</h3>
+            <h3>批踢踢實業坊 看版Soft_Job</h3>
+            <p><a href="https://www.ptt.cc/bbs/Soft_Job/M.1449035242.A.AAC.html">原文連結</a></p>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div id="tree-container"></div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <p><a href="https://github.com/robschmuecker">D3.js Author: Rob Schmuecker</a></p>
+        </div>
     </div>
-    <br>
-    <div id="tree-container"></div>
-    <br>
-    <div class="row">
-      <p><a href="https://github.com/robschmuecker">D3.js Author: Rob Schmuecker</a></p>
-    </div>
-  </div>
-  <script src="../js/d3/d3.min.js" charset="utf-8"></script>
-  <!--Tree JS-->
-  <script scr="dndTree.js"></script>
+    <!--d3.js-->
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <!--dndTree.js-->
+    <script scr="scriptTree.js"></script>
 </body>
 
 </html>
