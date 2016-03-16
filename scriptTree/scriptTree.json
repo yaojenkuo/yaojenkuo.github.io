@@ -5,57 +5,74 @@
         "children": [{
             "name": "Front-End",
             "children": [{
-                "name": "HTML"
+                "name": "HTML",
+                "size": 1234
             }, {
-                "name": "CSS"
+                "name": "CSS",
+                "size": 1234
             }, {
                 "name": "JavaScript",
                 "children": [{
-                    "name": "jQuery"
+                    "name": "jQuery",
+                    "size": 1234
                 }, {
-                    "name": "D3"
+                    "name": "D3",
+                    "size": 1234
                 }]
             }]
         }, {
             "name": "Back-End",
             "children": [{
-                "name": "Ruby on Rails"
+                "name": "Ruby on Rails",
+                "size": 1234
             }, {
-                "name": "Node.js"
+                "name": "Node.js",
+                "size": 1234
             }, {
-                "name": "Django"
+                "name": "Django",
+                "size": 1234
             }, {
-                "name": "ASP.NET"
+                "name": "ASP.NET",
+                "size": 1234
             }, {
-                "name": "PHP"
+                "name": "PHP",
+                "size": 1234
             }, {
-                "name": "Java"
+                "name": "Java",
+                "size": 1234
             }]
         }]
     }, {
         "name": "PC",
         "children": [{
-            "name": "C#"
+            "name": "C#",
+            "size": 1234
         }, {
-            "name": "C++"
+            "name": "C++",
+            "size": 1234
         }, {
-            "name": "Java"
+            "name": "Java",
+            "size": 1234
         }]
     }, {
         "name": "Mobile",
         "children": [{
             "name": "Android",
             "children": [{
-                "name": "Java"
+                "name": "Java",
+                "size": 1234
             }, {
-                "name": "C++"
+                "name": "C++",
+                "size": 1234
             }]
         }, {
             "name": "iOS",
             "children": [{
-                "name": "ObjectiveC"
+                "name": "ObjectiveC",
+                "size": 1234
             }, {
-                "name": "Swift"
+                "name": "Swift",
+                "size": 1234
             }]
         }]
     }, {
@@ -63,20 +80,24 @@
         "children": [{
             "name": "8051",
             "children": [{
-                "name": "C"
+                "name": "C",
+                "size": 1234
             }]
         }, {
             "name": "ARM-based",
             "children": [{
-                "name": "C++"
+                "name": "C++",
+                "size": 1234
             }]
         }]
     }, {
         "name": "Data Analysis",
         "children": [{
-            "name": "R"
+            "name": "R",
+            "size": 1234
         }, {
-            "name": "Python"
+            "name": "Python",
+            "size": 1234
         }]
     }]
 }
