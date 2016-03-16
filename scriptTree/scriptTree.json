@@ -1,90 +1,82 @@
 {
-  "name": "Programming Language",
-  "children": [{
-    "name": "Web",
+    "name": "Programming Languages",
     "children": [{
-      "name": "Front-end",
-      "children": [{
-        "name": "HTML",
-        "size": 3938
-      }, {
-        "name": "CSS",
-        "size": 3812
-      }, {
-        "name": "JavaScript",
-        "size": 6714
-      }]
-      "name": "Back-end",
-      "children": [{
-        "name": "Ruby on Rails",
-        "size": 3534
-      }, {
-        "name": "Node.js",
-        "size": 3534
-      }, {
-        "name": "Django",
-        "size": 3534
-      }, {
-        "name": "ASP.NET",
-        "size": 3534
-      }, {
-        "name": "PHP",
-        "size": 3534
-      }, {
-        "name": "Java",
-        "size": 3534
-      }]
-    }]
-    "name": "PC",
-    "children": [{
-      "name": "C#",
-      "size": 3534
+        "name": "Web",
+        "children": [{
+            "name": "Front-End",
+            "children": [{
+                "name": "HTML"
+            }, {
+                "name": "CSS"
+            }, {
+                "name": "JavaScript",
+                "children": [{
+                    "name": "jQuery"
+                }, {
+                    "name": "D3"
+                }]
+            }]
+        }, {
+            "name": "Back-End",
+            "children": [{
+                "name": "Ruby on Rails"
+            }, {
+                "name": "Node.js"
+            }, {
+                "name": "Django"
+            }, {
+                "name": "ASP.NET"
+            }, {
+                "name": "PHP"
+            }, {
+                "name": "Java"
+            }]
+        }]
     }, {
-      "name": "C++",
-      "size": 3534
+        "name": "PC",
+        "children": [{
+            "name": "C#"
+        }, {
+            "name": "C++"
+        }, {
+            "name": "Java"
+        }]
     }, {
-      "name": "Java",
-      "size": 3534
-    }]
-    "name": "Mobile",
-    "children": [{
-      "name": "Android",
-      "children": [{
-        "name": "Java",
-        "size": 3534
-      }, {
-        "name": "C++",
-        "size": 3534
-      }]
-      "name": "iOS",
-      "children": [{
-        "name": "ObjectiveC",
-        "size": 3534
-      }, {
-        "name": "Swift",
-        "size": 3534
-      }]
-    }]
-    "name": "Firmware",
-    "children": [{
-      "name": "8051",
-      "children": [{
-        "name": "C",
-        "size": 3534
-      }]
-      "name": "ARM-based",
-      "children": [{
-        "name": "C++",
-        "size": 3534
-      }]
-    }]
-    "name": "Data Analysis",
-    "children": [{
-      "name": "R",
-      "size": 3534
+        "name": "Mobile",
+        "children": [{
+            "name": "Android",
+            "children": [{
+                "name": "Java"
+            }, {
+                "name": "C++"
+            }]
+        }, {
+            "name": "iOS",
+            "children": [{
+                "name": "ObjectiveC"
+            }, {
+                "name": "Swift"
+            }]
+        }]
     }, {
-      "name": "Python",
-      "size": 3534
+        "name": "Firmware",
+        "children": [{
+            "name": "8051",
+            "children": [{
+                "name": "C"
+            }]
+        }, {
+            "name": "ARM-based",
+            "children": [{
+                "name": "C++"
+            }]
+        }]
+    }, {
+        "name": "Data Analysis",
+        "children": [{
+            "name": "R"
+        }, {
+            "name": "Python"
+        }]
     }]
-  }]
 }
