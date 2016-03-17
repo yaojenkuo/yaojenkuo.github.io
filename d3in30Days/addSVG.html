@@ -14,6 +14,8 @@
 <body>
     <div class="container-fluid">
         <div id="circle"></div>
+        <br>
+        <div id="square"></div>
     </div>
     <script>
     var svg = d3.select('#circle')
@@ -27,6 +29,19 @@
         .attr('r', 40)
         .attr('cx', 50)
         .attr('cy', 50);
+
+    var svg2 = d3.select('#square')
+        .append('svg')
+        .attr('width', 200)
+        .attr('height', 200);
+
+    svg2.append('square')
+        .style('stroke', 'black')
+        .style('fill', 'red')
+        .attr('x', 50)
+        .attr('y', 50)
+        .attr('width', 50)
+        .attr('height', 50);
     </script>
 </body>
 
