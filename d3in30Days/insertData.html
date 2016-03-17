@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+    var fruits = ['Apples', 'Pears', 'Bananas'];
+    d3.selectAll('li').data(fruits).text(function(d) {
+        return d;
+    });
+    </script>
+</body>
+
+</html>
