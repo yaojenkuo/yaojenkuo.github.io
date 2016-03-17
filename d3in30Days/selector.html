@@ -24,6 +24,8 @@
     selection.text("D3 just changed this header");
     var selectionAll = d3.selectAll("p");
     selectionAll.text("D3 changed all paragraphs");
+    var changeColor = d3.select("p");
+    changeColor.style('color', 'red').text("D3 changed the first paragraph to red");
     </script>
 </body>
 
