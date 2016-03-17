@@ -18,6 +18,11 @@
             <p>First Paragraph</p>
             <p>Second Paragraph</p>
             <p id="thirdParagraph">Third Paragraph</p>
+            <ul>
+                <li>Apples</li>
+                <li>Bananas</li>
+                <li>Peaches</li>
+            </ul>
         </div>
     </div>
     <script>
@@ -31,6 +36,8 @@
     changeAlign.attr('align', 'center').text("D3 moved the first header to center");
     var replaceThirdParagraph = d3.select("#thirdParagraph");
     replaceThirdParagraph.html("<h2>D3 changed third paragraph to the second header</h2>");
+    var appendNewFruit = d3.select("ul");
+    appendNewFruit.append('li').text('Tangerines');
     </script>
 </body>
 
