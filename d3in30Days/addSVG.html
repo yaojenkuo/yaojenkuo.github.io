@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Adding SVGs</title>
+    <title>Adding SVG</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -16,13 +16,13 @@
         <div id="circle"></div>
     </div>
     <script>
-    var svg = d3.select("#circle");
-    svg.append('svg')
+    var svg = d3.select('#circle')
+        .append('svg')
         .attr('width', 200)
         .attr('height', 200);
 
     svg.append('circle')
-        .style('stroke', 'green')
+        .style('stroke', 'black')
         .style('fill', 'yellow')
         .attr('r', 40)
         .attr('cx', 50)
