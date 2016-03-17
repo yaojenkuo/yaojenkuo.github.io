@@ -17,6 +17,7 @@
             <h1>First header</h1>
             <p>First Paragraph</p>
             <p>Second Paragraph</p>
+            <p id="thirdParagraph">Third Paragraph</p>
         </div>
     </div>
     <script>
@@ -27,7 +28,9 @@
     var changeColor = d3.select("p");
     changeColor.style('color', 'red').text("D3 changed the first paragraph to red");
     var changeAlign = d3.select("h1");
-    changeAlign.attr('align', 'center').text("D3 move the first header to center");
+    changeAlign.attr('align', 'center').text("D3 moved the first header to center");
+    var replaceThirdParagraph = d3.select("#thirdParagraph");
+    replaceThirdParagraph.html("<h2>D3 changed third paragraph to the second header</h2>");
     </script>
 </body>
 
