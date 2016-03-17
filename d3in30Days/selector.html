@@ -38,6 +38,10 @@
     replaceThirdParagraph.html("<h2>D3 changed third paragraph to the second header</h2>");
     var appendNewFruit = d3.select("ul");
     appendNewFruit.append('li').text('Tangerines');
+    appendNewFruit.append('li').text('Citrus fruits');
+    appendNewFruit.append('ul').append('li').text('Oranges');
+    appendNewFruit.append('ul').append('li').text('Lemons');
+    appendNewFruit.append('ul').append('li').text('Grapefruits');
     </script>
 </body>
 
