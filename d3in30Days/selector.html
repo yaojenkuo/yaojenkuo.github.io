@@ -26,6 +26,8 @@
     selectionAll.text("D3 changed all paragraphs");
     var changeColor = d3.select("p");
     changeColor.style('color', 'red').text("D3 changed the first paragraph to red");
+    var changeAlign = d3.select("h1");
+    changeAlign.attr('align', 'center').text("D3 move the first header to center");
     </script>
 </body>
 
