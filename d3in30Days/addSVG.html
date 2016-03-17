@@ -35,7 +35,9 @@
         .attr('width', 200)
         .attr('height', 200);
 
-    svg2.append('square')
+    var g = svg.append("svg:g");
+
+    g.append('rect')
         .style('stroke', 'black')
         .style('fill', 'red')
         .attr('x', 50)
