@@ -42,6 +42,8 @@
     appendNewFruit.append('ul').append('li').text('Oranges');
     appendNewFruit.append('ul').append('li').text('Lemons');
     appendNewFruit.append('ul').append('li').text('Grapefruits');
+    var insertNewFruit = d3.select("ul");
+    insertNewFruit.insert('li', 'li:nth-child(2)').text('Melon');
     </script>
 </body>
 
