@@ -59,7 +59,7 @@ function drawPie(pieName, dataSet, selectString, colors, margin, outerRadius, in
             colorScale = d3.scale.category20c();
     };
 
-    var canvasWidth = 700;
+    var canvasWidth = 500;
     var pieWidthTotal = outerRadius * 2;;
     var pieCenterX = outerRadius + margin / 2;
     var pieCenterY = outerRadius + margin / 2;
