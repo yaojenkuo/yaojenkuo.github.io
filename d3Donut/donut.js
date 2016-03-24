@@ -66,8 +66,8 @@ sliceLabel.enter().append("svg:text")
 
 // Store the currently-displayed angles in this._current.
 // Then, interpolate from this._current to the new angles.
-function arcTween(a) {
-    var i = d3.interpolate(this._current, a);
+function arcTween(button) {
+    var i = d3.interpolate(this._current, button);
     this._current = i(0);
     return function(t) {
         return arc(i(t));
@@ -94,6 +94,6 @@ function updateChart(model) {
 }
 
 // click handler
-$("#objectives a").click(function() {
+$("#objectives button").click(function() {
     updateChart(this.href.slice(this.href.indexOf('#') + 1));
 });
