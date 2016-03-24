@@ -62,6 +62,19 @@ sliceLabel.enter().append("svg:text")
         return labels[i];
     });
 
+arcs.append("svg:text")
+    .attr("transform", function(d) { //set the label's origin to the center of the arc
+        //we have to make sure to set these before calling arc.centroid
+        d.outerRadius = outerRadius + 50; // Set Outer Coordinate
+        d.innerRadius = outerRadius + 45; // Set Inner Coordinate
+        return "translate(" + arc.centroid(d) + ")";
+    })
+    .attr("text-anchor", "middle") //center the text on it's origin
+    .style("fill", "Purple")
+    .style("font", "bold 12px Arial")
+    .text(function(d, i) {
+        return data[i].label; }); //get the label from our original data array
+
 // --------- "PAY NO ATTENTION TO THE MAN BEHIND THE CURTAIN" ---------
 
 // Store the currently-displayed angles in this._current.
