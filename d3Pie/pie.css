@@ -1,18 +1,3 @@
-#d3portfolio {
-    width: 420px;
-    height: 420px;
-}
-
-.chartLabel {
-    font: 16px sans-serif;
-    fill: #666;
-}
-
-.arcLabel {
-    font: 10px sans-serif;
-    fill: #fff;
-}
-
 a {
     text-decoration: none;
 }
