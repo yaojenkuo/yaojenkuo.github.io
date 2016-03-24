@@ -6,8 +6,8 @@ var agg = { label: 'Aggressive', pct: [34, 0, 0, 0, 0, 0, 0, 47, 19] },
 
 var labels = ['BLV', 'JNK', 'BWX', 'VT', 'VWO', 'IEV', 'DBC', 'GXC', 'EWJ'];
 
-var w = 480, // width and height, natch
-    h = 480,
+var w = 420, // width and height, natch
+    h = 420,
     r = Math.min(w, h) / 2, // arc radius
     dur = 750, // duration, in milliseconds
     color = d3.scale.category10(),
@@ -59,7 +59,7 @@ sliceLabel.enter().append("svg:text")
     })
     .attr("text-anchor", "middle")
     .text(function(d, i) {
-        return data.label[i] + ' ' + data.pct[i] + '%';
+        return labels[i];
     });
 
 // --------- "PAY NO ATTENTION TO THE MAN BEHIND THE CURTAIN" ---------

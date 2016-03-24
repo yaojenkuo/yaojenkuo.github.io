@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Donut Chart</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <!--<link rel="stylesheet" href="pie.css">-->
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div id="pie_chart_1">
+                <h3>Pie Chart Number 1</h3>
+                <div class="chart"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="pie_chart_2">
+                <h3>Pie Chart Number 2</h3>
+                <div class="chart"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="pie_chart_3">
+                <h3>Pie Chart Number 3</h3>
+                <div class="chart"></div>
+            </div>
+        </div>
+    </div>
+    <script src="pie.js"></script>
+    <script type="text/javascript">
+    drawPie("Pie1", dataSet1, "#pie_chart_1 .chart", "colorScale20", 10, 100, 5, 0);
+    drawPie("Pie2", dataSet2, "#pie_chart_2 .chart", "colorScale20b", 10, 100, 5, 0);
+    drawPie("Pie3", dataSet3, "#pie_chart_3 .chart", "colorScale20c", 10, 100, 5, 0);
+    </script>
+</body>
+
+</html>
