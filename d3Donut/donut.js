@@ -6,8 +6,8 @@ var agg = { label: 'Aggressive', pct: [34, 0, 0, 0, 0, 0, 0, 47, 19] },
 
 var labels = ['BLV', 'JNK', 'BWX', 'VT', 'VWO', 'IEV', 'DBC', 'GXC', 'EWJ'];
 
-var w = 420, // width and height, natch
-    h = 420,
+var w = 500, // width and height, natch
+    h = 500,
     r = Math.min(w, h) / 2, // arc radius
     dur = 750, // duration, in milliseconds
     color = d3.scale.category10(),
@@ -44,7 +44,8 @@ arcs.enter().append("svg:path")
     .attr("stroke", "white")
     .attr("stroke-width", 0.5)
     .attr("fill", function(d, i) {
-        return color(i); })
+        return color(i);
+    })
     .attr("d", arc)
     .each(function(d) { this._current = d });
 
@@ -54,10 +55,12 @@ var sliceLabel = label_group.selectAll("text")
 sliceLabel.enter().append("svg:text")
     .attr("class", "arcLabel")
     .attr("transform", function(d) {
-        return "translate(" + arc.centroid(d) + ")"; })
+        return "translate(" + arc.centroid(d) + ")";
+    })
     .attr("text-anchor", "middle")
     .text(function(d, i) {
-        return labels[i]; });
+        return labels[i] + data.pct[i] + '%';
+    });
 
 // --------- "PAY NO ATTENTION TO THE MAN BEHIND THE CURTAIN" ---------
 
@@ -81,9 +84,11 @@ function updateChart(model) {
     sliceLabel.data(donut(data.pct));
     sliceLabel.transition().ease("elastic").duration(dur)
         .attr("transform", function(d) {
-            return "translate(" + arc.centroid(d) + ")"; })
+            return "translate(" + arc.centroid(d) + ")";
+        })
         .style("fill-opacity", function(d) {
-            return d.value == 0 ? 1e-6 : 1; });
+            return d.value == 0 ? 1e-6 : 1;
+        });
 
     pieLabel.text(data.label);
 }
