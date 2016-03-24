@@ -15,10 +15,10 @@ var dataSet2 = [
 ];
 
 var dataSet3 = [
-    { legendLabel: "BLV", magnitude: 44, link: "#" },
-    { legendLabel: "JNK", magnitude: 19, link: "#" },
-    { legendLabel: "BWX", magnitude: 30, link: "#" },
-    { legendLabel: "EWJ", magnitude: 7, link: "#" }
+    { legendLabel: "一般債券", magnitude: 44, link: "#" },
+    { legendLabel: "高收益債券", magnitude: 19, link: "#" },
+    { legendLabel: "新興市場債券", magnitude: 30, link: "#" },
+    { legendLabel: "單一成熟市場股票", magnitude: 7, link: "#" }
 ];
 
 
