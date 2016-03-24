@@ -1,6 +1,6 @@
 #d3portfolio {
-    width: 320px;
-    height: 320px;
+    width: 640px;
+    height: 640px;
 }
 
 .chartLabel {
@@ -11,4 +11,8 @@
 .arcLabel {
     font: 10px sans-serif;
     fill: #fff;
+}
+
+a {
+    text-decoration: none;
 }
