@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Donut Chart</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="donut.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div id="objectives">
+                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default"><a href="#agg">Aggressive</a></button>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default"><a href="#bal">Balanced</a></button>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default"><a href="#min">Minimum Risk</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div id="d3portfolio"></div>
+            </div>
+        </div>
+    </div>
+    <script src="donut.js"></script>
+</body>
+
+</html>
