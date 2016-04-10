@@ -81,10 +81,18 @@ hr.star-primary:after {
 }
 
 header {
+    position: relative;
+    width: 100%;
+    min-height: auto;
     text-align: center;
     color: #fff;
     /*background: #18bc9c;*/
     background-image: url(../img/header.jpg);
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }
 
 header .container {
