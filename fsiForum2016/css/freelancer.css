@@ -83,6 +83,7 @@ hr.star-primary:after {
 header {
     position: relative;
     width: 100%;
+    height: 100vh;
     min-height: auto;
     text-align: center;
     color: #fff;
