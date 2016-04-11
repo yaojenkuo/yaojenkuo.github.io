@@ -232,57 +232,45 @@
                 </div>
             </div>
             <div class="row">
-                <div id="content">
-                    <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
-                        <li class="active"><a href="#retirement" data-toggle="tab">退休投資</a></li>
-                        <li><a href="#self" data-toggle="tab">自我投資</a></li>
-                        <li><a href="#eductation" data-toggle="tab">教育基金</a></li>
-                    </ul>
-                    <div id="my-tab-content" class="tab-content">
-                        <div class="tab-pane active" id="retirement">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>退休投資</h3>
-                                        </div>
-                                        <div class="panel-body">
-                                            <div id="morris-area-chart" style="height: 350px;"></div>
-                                        </div>
-                                    </div>
-                                </div>
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#home">自我投資</a></li>
+                    <li><a data-toggle="tab" href="#menu1">子女教育</a></li>
+                    <li><a data-toggle="tab" href="#menu2">退休儲蓄</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="home" class="tab-pane fade in active">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Area Chart</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div id="morris-area-chart"></div>
                             </div>
                         </div>
-                        <div class="tab-pane" id="self">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>自我投資</h3>
-                                        </div>
-                                        <div class="panel-body">
-                                            <div id="morris-area-chart" style="height: 350px;"></div>
-                                        </div>
-                                    </div>
-                                </div>
+                    </div>
+                    <div id="menu1" class="tab-pane fade">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Area Chart</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div id="morris-area-chart"></div>
                             </div>
                         </div>
-                        <div class="tab-pane" id="eductation">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>教育基金</h3>
-                                        </div>
-                                        <div class="panel-body">
-                                            <div id="morris-area-chart" style="height: 350px;"></div>
-                                        </div>
-                                    </div>
-                                </div>
+                    </div>
+                    <div id="menu2" class="tab-pane fade">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Area Chart</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div id="morris-area-chart"></div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center page-scroll">
                     <a href="#fundmarket" class="btn btn-lg btn-success">
                         <i class="fa fa-cart-plus"></i>購買基金
