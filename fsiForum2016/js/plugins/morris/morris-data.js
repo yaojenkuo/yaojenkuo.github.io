@@ -193,7 +193,7 @@ $(function() {
     });
 
     // Bar Chart
-    Morris.Bar({
+    new Morris.Bar({
         element: 'morris-bar-chart-1',
         data: [{
             device: 'iPhone',
@@ -224,7 +224,7 @@ $(function() {
     });
 
     // Bar Chart
-    Morris.Bar({
+    new Morris.Bar({
         element: 'morris-bar-chart-2',
         data: [{
             device: 'iPhone',
@@ -255,7 +255,7 @@ $(function() {
     });
 
     // Bar Chart
-    Morris.Bar({
+    new Morris.Bar({
         element: 'morris-bar-chart-3',
         data: [{
             device: 'iPhone',
