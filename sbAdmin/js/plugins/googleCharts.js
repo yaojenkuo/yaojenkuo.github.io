@@ -10,8 +10,8 @@ function drawChart1() {
     ]);
 
     var options = {
-        width: 600,
-        height: 480,
+        width: 300,
+        height: 180,
         redFrom: 90,
         redTo: 100,
         yellowFrom: 75,
@@ -32,8 +32,8 @@ function drawChart2() {
     ]);
 
     var options = {
-        width: 600,
-        height: 480,
+        width: 300,
+        height: 180,
         redFrom: 90,
         redTo: 100,
         yellowFrom: 75,
