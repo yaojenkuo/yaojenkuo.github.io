@@ -1,30 +1,22 @@
-google.charts.load('current', { packages: ['corechart', 'bar'] });
-google.charts.setOnLoadCallback(drawBasic);
+google.charts.load("current", { packages: ["corechart"] });
+google.charts.setOnLoadCallback(drawChart1);
 
-function drawBasic() {
-
+function drawChart1() {
     var data = google.visualization.arrayToDataTable([
-        ['City', '2010 Population'],
-        ['New York City, NY', 8175000],
-        ['Los Angeles, CA', 3792000],
-        ['Chicago, IL', 2695000],
-        ['Houston, TX', 2099000],
-        ['Philadelphia, PA', 1526000]
+        ['Fund', 'Dollar'],
+        ['全球股票型基金', 11],
+        ['區域股票型基金', 2],
+        ['新興股票型基金', 3],
+        ['一般債券型基金', 2],
+        ['高收益債券型基金', 7],
+        ['主題債券型基金', 5]
     ]);
 
     var options = {
-        title: 'Population of Largest U.S. Cities',
-        chartArea: { width: '50%' },
-        hAxis: {
-            title: 'Total Population',
-            minValue: 0
-        },
-        vAxis: {
-            title: 'City'
-        }
+        title: 'My Daily Activities',
+        pieHole: 0.4,
     };
 
-    var chart = new google.visualization.BarChart(document.getElementById('bar-chart-1'));
-
+    var chart = new google.visualization.PieChart(document.getElementById('donutchart1'));
     chart.draw(data, options);
 }
