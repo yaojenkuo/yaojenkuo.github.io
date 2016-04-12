@@ -1,7 +1,14 @@
 google.charts.load("current", { packages: ["corechart"] });
 google.charts.setOnLoadCallback(drawChart1);
-google.charts.setOnLoadCallback(drawChart2);
-google.charts.setOnLoadCallback(drawChart3);
+
+$('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+    if ($(e.target).attr('id') == 'menu1') {
+        drawChart2();
+    }
+    if ($(e.target).attr('id') == 'menu2') {
+        drawChart3();
+    }
+});
 
 function drawChart1() {
     var data = google.visualization.arrayToDataTable([
@@ -22,13 +29,6 @@ function drawChart1() {
     var chart = new google.visualization.PieChart(document.getElementById('donutchart1'));
     chart.draw(data, options);
 
-    function redraw() {
-        chart.draw(data, options);
-    }
-
-    $(window).resize(redraw);
-    $('#menu1').click(redraw);
-    $('#menu2').click(redraw);
 }
 
 function drawChart2() {
@@ -45,18 +45,13 @@ function drawChart2() {
     var options = {
         title: '資產配置',
         pieHole: 0.4,
+        width: 900,
+        height: 500
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('donutchart2'));
     chart.draw(data, options);
 
-    function redraw() {
-        chart.draw(data, options);
-    }
-
-    $(window).resize(redraw);
-    $('#home').click(redraw);
-    $('#menu2').click(redraw);
 }
 
 function drawChart3() {
@@ -73,16 +68,11 @@ function drawChart3() {
     var options = {
         title: '資產配置',
         pieHole: 0.4,
+        width: 900,
+        height: 500
     };
 
-    var chart = new google.visualization.PieChart(document.getElementById('donutchart2'));
+    var chart = new google.visualization.PieChart(document.getElementById('donutchart3'));
     chart.draw(data, options);
 
-    function redraw() {
-        chart.draw(data, options);
-    }
-
-    $(window).resize(redraw);
-    $('#menu1').click(redraw);
-    $('#home').click(redraw);
 }
