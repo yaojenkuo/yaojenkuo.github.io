@@ -2,7 +2,7 @@ google.charts.load("current", { packages: ["corechart"] });
 google.charts.setOnLoadCallback(drawChart1);
 google.charts.setOnLoadCallback(drawChart2);
 google.charts.setOnLoadCallback(drawChart3);
-
+/*
 $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
     if ($(e.target).attr('id') == 'menu1') {
         drawChart2();
@@ -10,7 +10,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
     if ($(e.target).attr('id') == 'menu2') {
         drawChart3();
     }
-});
+});*/
 
 function drawChart1() {
     var data = google.visualization.arrayToDataTable([
