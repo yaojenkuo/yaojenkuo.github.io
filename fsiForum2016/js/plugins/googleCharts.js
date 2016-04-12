@@ -1,5 +1,7 @@
 google.charts.load("current", { packages: ["corechart"] });
 google.charts.setOnLoadCallback(drawChart1);
+google.charts.setOnLoadCallback(drawChart2);
+google.charts.setOnLoadCallback(drawChart3);
 
 function drawChart1() {
     var data = google.visualization.arrayToDataTable([
@@ -21,7 +23,7 @@ function drawChart1() {
     chart.draw(data, options);
 
     function redraw() {
-        chart.draw(data);
+        chart.draw(data, options);
     }
 
     $(window).resize(redraw);
@@ -49,7 +51,7 @@ function drawChart2() {
     chart.draw(data, options);
 
     function redraw() {
-        chart.draw(data);
+        chart.draw(data, options);
     }
 
     $(window).resize(redraw);
@@ -77,7 +79,7 @@ function drawChart3() {
     chart.draw(data, options);
 
     function redraw() {
-        chart.draw(data);
+        chart.draw(data, options);
     }
 
     $(window).resize(redraw);
