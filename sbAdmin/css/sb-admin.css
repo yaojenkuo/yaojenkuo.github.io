@@ -7,11 +7,11 @@
 
 /* Global Styles */
 
-@import url(http://fonts.googleapis.com/earlyaccess/cwtexfangsong.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
 body {
     margin-top: 100px;
     background-color: #222;
-    font-family: 'cwTeXFangSong', serif;
+    font-family: 'Noto Sans TC', serif;
 }
 
 @media(min-width:768px) {
