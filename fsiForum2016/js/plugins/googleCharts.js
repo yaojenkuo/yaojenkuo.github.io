@@ -26,6 +26,8 @@ function drawChart1() {
     var options = {
         title: '資產配置',
         pieHole: 0.4,
+        width: 900,
+        height: 500
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('donutchart1'));
