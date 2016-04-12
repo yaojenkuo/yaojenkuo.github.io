@@ -4,11 +4,14 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+
 /* Global Styles */
 
+@import url(http://fonts.googleapis.com/earlyaccess/cwtexfangsong.css);
 body {
     margin-top: 100px;
     background-color: #222;
+    font-family: 'cwTeXFangSong', serif;
 }
 
 @media(min-width:768px) {
@@ -36,11 +39,11 @@ body {
     #wrapper {
         padding-left: 225px;
     }
-
     #page-wrapper {
         padding: 10px;
     }
 }
+
 
 /* Top Navigation */
 
@@ -73,12 +76,12 @@ body {
     float: left;
     position: absolute;
     margin-top: 0;
-    border: 1px solid rgba(0,0,0,.15);
+    border: 1px solid rgba(0, 0, 0, .15);
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     background-color: #fff;
-    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
-    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 }
 
 .top-nav>.open>.dropdown-menu>li>a {
@@ -94,7 +97,7 @@ ul.message-dropdown {
 
 li.message-preview {
     width: 275px;
-    border-bottom: 1px solid rgba(0,0,0,.15);
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
 }
 
 li.message-preview>a {
@@ -109,6 +112,7 @@ li.message-footer {
 ul.alert-dropdown {
     width: 200px;
 }
+
 
 /* Side Navigation */
 
@@ -127,11 +131,9 @@ ul.alert-dropdown {
         overflow-x: hidden;
         padding-bottom: 40px;
     }
-
     .side-nav>li>a {
         width: 225px;
     }
-
     .side-nav li a:hover,
     .side-nav li a:focus {
         outline: none;
@@ -154,6 +156,7 @@ ul.alert-dropdown {
     color: #fff;
 }
 
+
 /* Flot Chart Containers */
 
 .flot-chart {
@@ -165,6 +168,7 @@ ul.alert-dropdown {
     width: 100%;
     height: 100%;
 }
+
 
 /* Custom Colored Panels */
 
