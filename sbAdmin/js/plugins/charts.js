@@ -17,7 +17,7 @@ function drawChart1() {
     var options = {
         title: '資產配置',
         pieHole: 0.4,
-        width: 520,
+        width: 500,
         height: 300
     };
 
@@ -40,7 +40,7 @@ function drawChart2() {
     var options = {
         title: '資產配置',
         pieHole: 0.4,
-        width: 520,
+        width: 500,
         height: 300
     };
 
