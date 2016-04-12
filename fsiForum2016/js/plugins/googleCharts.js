@@ -1,7 +1,7 @@
 google.charts.load("current", { packages: ["corechart"] });
 google.charts.setOnLoadCallback(drawChart1);
-google.charts.setOnLoadCallback(drawChart2);
-google.charts.setOnLoadCallback(drawChart3);
+//google.charts.setOnLoadCallback(drawChart2);
+//google.charts.setOnLoadCallback(drawChart3);
 
 function drawChart1() {
     var data = google.visualization.arrayToDataTable([
@@ -62,3 +62,8 @@ function drawChart3() {
     var chart = new google.visualization.PieChart(document.getElementById('donutchart3'));
     chart.draw(data, options);
 }
+
+$('#menu1').on("shown.bs.tab", function() {
+    drawChart2();
+    $('#menu1').off(); // to remove the binded event after the initial rendering
+});
