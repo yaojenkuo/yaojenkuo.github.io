@@ -1,5 +1,5 @@
-google.charts.load('current', { packages: ['geochart'] });
-//google.charts.setOnLoadCallback(drawChart1);
+google.charts.load('current', { packages: ['geochart', 'corechart'] });
+google.charts.setOnLoadCallback(drawChart1);
 google.charts.setOnLoadCallback(drawRegionsMap);
 //google.charts.setOnLoadCallback(drawChart2);
 //google.charts.setOnLoadCallback(drawChart3);
