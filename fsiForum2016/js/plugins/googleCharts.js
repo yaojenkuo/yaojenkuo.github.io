@@ -31,15 +31,32 @@ function drawRegionsMap() {
 
     var data = google.visualization.arrayToDataTable([
         ['Continent', 'Index'],
-        ['002', 200],
-        ['150', 300],
-        ['019', 400],
-        ['142', 500],
-        ['009', 600]
+        ['Northern Africa', 200],
+        ['Western Africa', 300],
+        ['Middle Africa', 400],
+        ['Eastern Africa', 500],
+        ['Southern Africa', 600],
+        ['Northern Europe', 200],
+        ['Western Europe', 300],
+        ['Eastern Europe', 400],
+        ['Southern Europe', 500],
+        ['Northern America', 600],
+        ['Caribbean', 200],
+        ['Central America', 300],
+        ['South America', 400],
+        ['Central Asia', 500],
+        ['Eastern Asia', 600],
+        ['Southern Asia', 200],
+        ['South-Eastern Asia', 300],
+        ['Western Asia', 400],
+        ['Australia and New Zealand', 500],
+        ['Melanesia', 600],
+        ['Micronesia', 500],
+        ['Polynesia', 600]
     ]);
 
     var options = {
-        resolution: 'continents',
+        resolution: 'subcontinents',
         colorAxis: { colors: ['green', 'red'] }
     };
 
