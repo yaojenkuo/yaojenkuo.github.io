@@ -178,8 +178,8 @@ function drawScatterChart() {
 
     var options = {
         title: 'Efficient Frontier',
-        hAxis: { title: 'Standard Deviation', minValue: 0 },
-        vAxis: { title: 'Expected Return', minValue: 0 },
+        hAxis: { title: 'Standard Deviation' },
+        vAxis: { title: 'Expected Return' },
         legend: 'none'
     };
 
