@@ -1,5 +1,6 @@
-google.charts.load("current", { packages: ["corechart"] });
+google.charts.load("current", { packages: ["corechart", "geochart"] });
 google.charts.setOnLoadCallback(drawChart1);
+google.charts.setOnLoadCallback(drawRegionsMap);
 //google.charts.setOnLoadCallback(drawChart2);
 //google.charts.setOnLoadCallback(drawChart3);
 /*
@@ -33,6 +34,27 @@ function drawChart1() {
     var chart = new google.visualization.PieChart(document.getElementById('donutchart1'));
     chart.draw(data, options);
 
+}
+
+function drawRegionsMap() {
+
+    var data = google.visualization.arrayToDataTable([
+        ['Country', 'Index'],
+        ['Germany', 200],
+        ['United States', 300],
+        ['Brazil', 400],
+        ['Canada', 500],
+        ['France', 600],
+        ['RU', 700],
+        ['Japan', 500],
+        ['China', 400]
+    ]);
+
+    var options = {};
+
+    var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+    chart.draw(data, options);
 }
 
 /*
