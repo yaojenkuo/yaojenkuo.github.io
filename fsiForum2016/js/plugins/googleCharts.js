@@ -40,7 +40,7 @@ function drawRegionsMap() {
         ['Japan', 500],
         ['China', 400],
         ['Australia', 500],
-        ['Korea', 1100]
+        ['India', 300]
     ]);
 
     var options = {
