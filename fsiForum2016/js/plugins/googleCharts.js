@@ -83,7 +83,7 @@ function drawAreaChart() {
     chart.draw(data, options);
 }
 
-function drawChart() {
+function drawScatterChart1() {
 
     var data = new google.visualization.DataTable();
     data.addColumn('number', 'Hours Studied');
@@ -158,7 +158,7 @@ function drawChart() {
     chart.draw(data, google.charts.Scatter.convertOptions(options));
 }
 
-function drawChart() {
+function drawScatterChart2() {
 
     var data = new google.visualization.DataTable();
     data.addColumn('number', 'Hours Studied');
