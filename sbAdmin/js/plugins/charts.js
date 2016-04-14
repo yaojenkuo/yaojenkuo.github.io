@@ -16,9 +16,7 @@ function drawChart1() {
 
     var options = {
         title: '資產配置',
-        pieHole: 0.4,
-        width: 500,
-        height: 300
+        pieHole: 0.4
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('donut1'));
@@ -39,9 +37,7 @@ function drawChart2() {
 
     var options = {
         title: '資產配置',
-        pieHole: 0.4,
-        width: 500,
-        height: 300
+        pieHole: 0.4
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('donut2'));
