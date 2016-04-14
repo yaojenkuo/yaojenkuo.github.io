@@ -30,17 +30,12 @@ function drawDonutChart() {
 function drawRegionsMap() {
 
     var data = google.visualization.arrayToDataTable([
-        ['Country', 'Index'],
-        ['Germany', 200],
-        ['United States', 300],
-        ['Brazil', 400],
-        ['Canada', 500],
-        ['France', 600],
-        ['RU', 700],
-        ['Japan', 500],
-        ['China', 400],
-        ['Australia', 500],
-        ['India', 300]
+        ['Continent', 'Index'],
+        ['Africa', 200],
+        ['Europe', 300],
+        ['Americas', 400],
+        ['Asia', 500],
+        ['Oceania', 600]
     ]);
 
     var options = {
@@ -64,7 +59,8 @@ function drawAreaChart() {
     var options = {
         title: 'Index',
         hAxis: { title: 'Year', titleTextStyle: { color: '#333' } },
-        vAxis: { minValue: 0 }
+        vAxis: { minValue: 0 },
+        displayMode: 'regions'
     };
 
     var chart = new google.visualization.AreaChart(document.getElementById('area_div'));
