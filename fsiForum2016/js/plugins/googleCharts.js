@@ -155,7 +155,7 @@ function drawScatterChart1() {
 
     var chart = new google.charts.Scatter(document.getElementById('efficientFrontier'));
 
-    chart.draw(data, google.charts.Scatter.convertOptions(options));
+    chart.draw(data, options);
 }
 
 function drawScatterChart2() {
@@ -230,7 +230,7 @@ function drawScatterChart2() {
 
     var chart = new google.charts.Scatter(document.getElementById('scatterplot'));
 
-    chart.draw(data, google.charts.Scatter.convertOptions(options));
+    chart.draw(data, options);
 }
 
 /*
