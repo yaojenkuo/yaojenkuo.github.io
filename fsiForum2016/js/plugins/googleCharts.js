@@ -1,7 +1,7 @@
 google.charts.load("current", { packages: ["corechart"] });
 google.charts.setOnLoadCallback(drawChart1);
-google.charts.setOnLoadCallback(drawChart2);
-google.charts.setOnLoadCallback(drawChart3);
+//google.charts.setOnLoadCallback(drawChart2);
+//google.charts.setOnLoadCallback(drawChart3);
 /*
 $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
     if ($(e.target).attr('id') == 'menu1') {
@@ -34,7 +34,7 @@ function drawChart1() {
     chart.draw(data, options);
 
 }
-
+/*
 function drawChart2() {
     var data = google.visualization.arrayToDataTable([
         ['Fund', 'Dollar'],
@@ -80,3 +80,4 @@ function drawChart3() {
     chart.draw(data, options);
 
 }
+*/
