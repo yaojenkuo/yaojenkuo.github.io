@@ -31,11 +31,11 @@ function drawRegionsMap() {
 
     var data = google.visualization.arrayToDataTable([
         ['Continent', 'Index'],
-        ['Africa', 200],
-        ['Europe', 300],
-        ['Americas', 400],
-        ['Asia', 500],
-        ['Oceania', 600]
+        ['002', 200],
+        ['150', 300],
+        ['019', 400],
+        ['142', 500],
+        ['009', 600]
     ]);
 
     var options = {
