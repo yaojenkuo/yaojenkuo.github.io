@@ -1,9 +1,9 @@
 google.charts.load('current', { packages: ['geochart', 'corechart'] });
 google.charts.setOnLoadCallback(drawRegionsMap);
 google.charts.setOnLoadCallback(drawAreaChart);
-google.charts.setOnLoadCallback(drawScatterChart1);
+//google.charts.setOnLoadCallback(drawScatterChart1);
 google.charts.setOnLoadCallback(drawDonutChart);
-google.charts.setOnLoadCallback(drawScatterChart2);
+//google.charts.setOnLoadCallback(drawScatterChart2);
 //google.charts.setOnLoadCallback(drawChart2);
 //google.charts.setOnLoadCallback(drawChart3);
 /*
