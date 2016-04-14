@@ -1,9 +1,9 @@
 google.charts.load('current', { packages: ['geochart', 'corechart'] });
 google.charts.setOnLoadCallback(drawRegionsMap);
 google.charts.setOnLoadCallback(drawAreaChart);
-google.charts.setOnLoadCallback(drawBubbleChart1);
+google.charts.setOnLoadCallback(drawScatterChart);
 google.charts.setOnLoadCallback(drawDonutChart);
-google.charts.setOnLoadCallback(drawBubbleChart2);
+google.charts.setOnLoadCallback(drawBubbleChart);
 
 
 function drawDonutChart() {
@@ -71,27 +71,30 @@ function drawAreaChart() {
     chart.draw(data, options);
 }
 
-function drawBubbleChart1() {
+function drawScatterChart() {
     var data = google.visualization.arrayToDataTable([
-        ['ID', 'X', 'Y', 'Temperature'],
-        ['', 80, 167, 120],
-        ['', 79, 136, 130],
-        ['', 78, 184, 50],
-        ['', 72, 278, 230],
-        ['', 81, 200, 210],
-        ['', 72, 170, 100],
-        ['', 68, 477, 80]
+        ['Age', 'Weight'],
+        [8, 12],
+        [4, 5.5],
+        [11, 14],
+        [4, 5],
+        [3, 3.5],
+        [6.5, 7]
     ]);
 
     var options = {
-        colorAxis: { colors: ['yellow', 'red'] }
+        title: 'Age vs. Weight comparison',
+        hAxis: { title: 'Age', minValue: 0, maxValue: 15 },
+        vAxis: { title: 'Weight', minValue: 0, maxValue: 15 },
+        legend: 'none'
     };
 
-    var chart = new google.visualization.BubbleChart(document.getElementById('bubble1'));
+    var chart = new google.visualization.ScatterChart(document.getElementById('scatter'));
+
     chart.draw(data, options);
 }
 
-function drawBubbleChart2() {
+function drawBubbleChart() {
     var data = google.visualization.arrayToDataTable([
         ['ID', 'X', 'Y', 'Temperature'],
         ['', 80, 167, 120],
@@ -107,6 +110,6 @@ function drawBubbleChart2() {
         colorAxis: { colors: ['yellow', 'red'] }
     };
 
-    var chart = new google.visualization.BubbleChart(document.getElementById('bubble2'));
+    var chart = new google.visualization.BubbleChart(document.getElementById('bubble'));
     chart.draw(data, options);
 }
