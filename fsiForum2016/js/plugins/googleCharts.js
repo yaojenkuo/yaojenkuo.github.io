@@ -39,6 +39,7 @@ function drawRegionsMap() {
     ]);
 
     var options = {
+        resolution: 'continents',
         colorAxis: { colors: ['green', 'red'] }
     };
 
