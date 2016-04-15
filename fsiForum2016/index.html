@@ -167,23 +167,12 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h4>符合您的家庭狀態?</h4>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="familyRadio">單薪、無家屬</label>
-                    </div>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="familyRadio">單薪、至少一位家屬</label>
-                    </div>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="familyRadio">雙薪、無家屬</label>
-                    </div>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="familyRadio">雙薪、至少一位家屬</label>
-                    </div>
+                    <h4>您預計的投資金額?</h4>
+                    <form role="form">
+                        <div class="form-group">
+                            <input class="form-control">
+                        </div>
+                    </form>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center page-scroll">
                     <a href="#risk3" class="btn btn-lg btn-success">
@@ -237,10 +226,24 @@
             </div>
             <div class="row">
                 <div class="col-lg-7">
-                    <div id="regions_div" style="width: 100%; height: 350px;"></div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="fa fa-long-arrow-right fa-fw"></i>概觀全球市場的景氣指標</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div id="regions_div" style="width: 100%; height: 400px;"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-5">
-                    <div id="area_div" style="width: 100%; height: 350px"></div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="fa fa-long-arrow-right fa-fw"></i>細看特定市場的景氣指標</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div id="area_div" style="width: 100%; height: 400px"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <br>
@@ -265,13 +268,31 @@
             </div>
             <div class="row">
                 <div class="col-lg-3">
-                    <div id="scatter" style="width: 100%; height: 350px"></div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="fa fa-long-arrow-right fa-fw"></i>在效率前緣上選取投資組合</h3></div>
+                        <div class="panel-body">
+                            <div id="scatter" style="width: 100%; height: 400px"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-6">
-                    <div id="donutchart" style="width: 100%; height: 350px"></div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="fa fa-long-arrow-right fa-fw"></i>觀察投資組合的配置</h3></div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="donutchart" style="width: 100%; height: 400px"></div>
+                    </div>
                 </div>
                 <div class="col-lg-3">
-                    <div id="bubble" style="width: 100%; height: 350px"></div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="fa fa-long-arrow-right fa-fw"></i>利用SAS的分群演算挑選基金</h3></div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="bubble" style="width: 100%; height: 400px"></div>
+                    </div>
                 </div>
             </div>
             <!--
@@ -413,9 +434,7 @@
                     <p>隨時監控投資組合的表現，並在適當的時點以訊息或電子郵件通知投資人</p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="../sbAdmin" class="btn btn-lg btn-outline">
-                        <i class="fa fa-tachometer"></i>前往儀表板
-                    </a>
+                    <a href="../sbAdmin" class="btn btn-lg btn-outline">前往儀表板</a>
                 </div>
             </div>
         </div>
