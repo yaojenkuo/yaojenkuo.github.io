@@ -159,17 +159,7 @@ $(document).ready(function () {
 <div id="find-out-itemids-with-multiple-vendors" class="section level2">
 <h2>Find Out ITEMIDs with Multiple Vendors</h2>
 <p>Then we created a vector called <code>duplicated_ids</code> contained only the unique ITEMIDs sold by multiple vendors.</p>
-<pre><code>##     sales....ITEMID.. duplicated_flg
-## 4                8170           TRUE
-## 120             22636           TRUE
-## 182             27086           TRUE
-## 262             29042           TRUE
-## 396             35329           TRUE
-## 462             36331           TRUE
-## 514             37582           TRUE
-## 517             37593           TRUE
-## 522             37989           TRUE
-## 694             41988           TRUE</code></pre>
+<pre><code>##  [1]  8170 22636 27086 29042 35329 36331 37582 37593 37989 41988</code></pre>
 <p>And we could use this vector to merge back with our raw data, and easily subset those sales record of multiple vendors.</p>
 <pre><code>##    ITEMID SALE_BASIS_DY  VENDORID AVG_SALE_PRICE SUM_SALE_AMT
 ## 1    8170      20160531 A00010028       8900.000           16
