@@ -251,7 +251,7 @@ fit_km_norm &lt;-<span class="st"> </span><span class="kw">kmeans</span>(mtcars_
 <ul>
 <li>衡量群集之間的距離時有<strong>3</strong>種計算方式
 <ul>
-<li>簡單連結: 僅衡量群集間的最短距離</li>
+<li>單一連結: 僅衡量群集間的最短距離</li>
 <li>完整連結: 僅衡量群集間的最大距離</li>
 <li>平均連結: 衡量群集間的平均距離</li>
 </ul></li>
@@ -280,7 +280,7 @@ crime_single_hclust &lt;-<span class="st"> </span><span class="kw">cutree</span>
 <div id="---do-it-yourself" class="slide section level2">
 <h1>階層式分群 - Do It Yourself</h1>
 <ul>
-<li>把 <code>simple-linkage</code> 的方法改為 <code>complete-linkage</code></li>
+<li>把 <code>single-linkage</code> 的方法改為 <code>complete-linkage</code></li>
 <li>另外用 k-means 分為四群</li>
 <li>比較兩種分群的唐恩指數</li>
 </ul>
