@@ -415,6 +415,53 @@ strawHatPirateGathered &lt;-<span class="st"> </span><span class="kw">gather</sp
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">strawHatPirateSpread &lt;-<span class="st"> </span><span class="kw">spread</span>(strawHatPirateGathered,<span class="dt">key =</span> metricType, <span class="dt">value =</span> metric)
 <span class="kw">View</span>(strawHatPirateSpread)</code></pre></div>
 </div>
+<div id="tidyr--4" class="slide section level2">
+<h1>tidyr 套件 (4)</h1>
+<ul>
+<li>分享工作上的應用</li>
+<li>將 Long table 轉換成 Wide table</li>
+<li>使用 <code>spread</code> 函數</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">workSample &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;/Users/tkuo/Downloads/purchased_cate_active.csv&quot;</span>)<span class="co">#載入資料</span>
+<span class="kw">head</span>(workSample[<span class="kw">order</span>(workSample$MEMBER_SRL),], <span class="dv">20</span>)<span class="co">#觀看排序後的前20筆資料</span></code></pre></div>
+<pre><code>##     MEMBER_SRL       CATEGORY PURCHASED
+## 88        7061         Beauty     53900
+## 40        7075         Beauty     26000
+## 74        7201        Unknown     19800
+## 49        7210        Unknown    167400
+## 133       7210           Baby     36900
+## 57        7227           Baby     95500
+## 85        7247        Unknown      2500
+## 129       7266     Sports/Car     19800
+## 7         7286           Food     16200
+## 62        7286         Travel    117000
+## 41        7311 Living/Kitchen      8900
+## 52        7378     Sports/Car     47800
+## 67        7378         Travel    193000
+## 83        7378        Unknown    201000
+## 94        7417         Beauty      7900
+## 106       7465         Beauty     14500
+## 21        7505    Electronics    143600
+## 48        7505     Sports/Car     42300
+## 81        7511 Homedeco/Hobby     47600
+## 89        7566           Food     14800</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">workSampleTrans &lt;-<span class="st"> </span><span class="kw">spread</span>(workSample, <span class="dt">key =</span> CATEGORY, <span class="dt">value =</span> PURCHASED)<span class="co">#轉置</span>
+<span class="kw">head</span>(workSampleTrans)<span class="co">#只看前六筆資料</span></code></pre></div>
+<pre><code>##   MEMBER_SRL Accessories  Baby Beauty Electronics Fashion Food
+## 1       7061          NA    NA  53900          NA      NA   NA
+## 2       7075          NA    NA  26000          NA      NA   NA
+## 3       7201          NA    NA     NA          NA      NA   NA
+## 4       7210          NA 36900     NA          NA      NA   NA
+## 5       7227          NA 95500     NA          NA      NA   NA
+## 6       7247          NA    NA     NA          NA      NA   NA
+##   Homedeco/Hobby Living/Kitchen Local Sports/Car Travel Unknown
+## 1             NA             NA    NA         NA     NA      NA
+## 2             NA             NA    NA         NA     NA      NA
+## 3             NA             NA    NA         NA     NA   19800
+## 4             NA             NA    NA         NA     NA  167400
+## 5             NA             NA    NA         NA     NA      NA
+## 6             NA             NA    NA         NA     NA    2500</code></pre>
+</div>
 <div id="reference" class="slide section level2">
 <h1>Reference</h1>
 <ul>
