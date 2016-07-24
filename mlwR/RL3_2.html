@@ -208,6 +208,53 @@ accuracy</code></pre></div>
 <li>印出混淆矩陣</li>
 <li>計算 accuracy, TPR與FPR</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 讀取資料</span>
+titanic &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;/Users/tkuo/ntu_train/NTUTrainRL3/data/train.csv&quot;</span>, <span class="dt">header =</span> <span class="ot">TRUE</span>)
+titanic &lt;-<span class="st"> </span>titanic[, <span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">10</span>:<span class="dv">12</span>)] %&gt;%<span class="st"> </span>na.omit
+titanic$Survived &lt;-<span class="st"> </span><span class="kw">factor</span>(titanic$Survived, <span class="dt">levels =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">0</span>))
+<span class="kw">str</span>(titanic)</code></pre></div>
+<pre><code>## 'data.frame':    714 obs. of  7 variables:
+##  $ Survived: Factor w/ 2 levels &quot;1&quot;,&quot;0&quot;: 2 1 1 1 2 2 2 1 1 1 ...
+##  $ Pclass  : int  3 1 3 1 3 1 3 3 2 3 ...
+##  $ Sex     : Factor w/ 2 levels &quot;female&quot;,&quot;male&quot;: 2 1 1 1 2 2 2 1 1 1 ...
+##  $ Age     : num  22 38 26 35 35 54 2 27 14 4 ...
+##  $ Fare    : num  7.25 71.28 7.92 53.1 8.05 ...
+##  $ Cabin   : Factor w/ 148 levels &quot;&quot;,&quot;A10&quot;,&quot;A14&quot;,..: 1 83 1 57 1 131 1 1 1 147 ...
+##  $ Embarked: Factor w/ 4 levels &quot;&quot;,&quot;C&quot;,&quot;Q&quot;,&quot;S&quot;: 4 2 4 4 4 4 4 4 2 4 ...
+##  - attr(*, &quot;na.action&quot;)=Class 'omit'  Named int [1:177] 6 18 20 27 29 30 32 33 37 43 ...
+##   .. ..- attr(*, &quot;names&quot;)= chr [1:177] &quot;6&quot; &quot;18&quot; &quot;20&quot; &quot;27&quot; ...</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 建立一個決策樹模型</span>
+<span class="kw">set.seed</span>(<span class="dv">123</span>)
+treeModel &lt;-<span class="st"> </span><span class="kw">rpart</span>(Survived ~<span class="st"> </span>., <span class="dt">data =</span> titanic, <span class="dt">method =</span> <span class="st">&quot;class&quot;</span>)
+titanicToBePredicted &lt;-<span class="st"> </span>titanic[, -<span class="dv">1</span>]
+prediction &lt;-<span class="st"> </span><span class="kw">predict</span>(treeModel, <span class="dt">newdata =</span> titanicToBePredicted, <span class="dt">type =</span> <span class="st">&quot;class&quot;</span>)
+
+<span class="co"># 將混淆矩陣印出來</span>
+confusionMatrix &lt;-<span class="st"> </span><span class="kw">table</span>(titanic$Survived, prediction, <span class="dt">dnn =</span> <span class="kw">c</span>(<span class="st">&quot;Actual&quot;</span>, <span class="st">&quot;Predicted&quot;</span>))
+confusionMatrix</code></pre></div>
+<pre><code>##       Predicted
+## Actual   1   0
+##      1 215  75
+##      0  19 405</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 獲得TP, TN, FP, FN</span>
+TP &lt;-<span class="st"> </span>confusionMatrix[<span class="dv">1</span>, <span class="dv">1</span>]
+TN &lt;-<span class="st"> </span>confusionMatrix[<span class="dv">2</span>, <span class="dv">2</span>]
+FP &lt;-<span class="st"> </span>confusionMatrix[<span class="dv">2</span>, <span class="dv">1</span>]
+FN &lt;-<span class="st"> </span>confusionMatrix[<span class="dv">1</span>, <span class="dv">2</span>]
+
+<span class="co"># 計算accuracy, TPR, FPR</span>
+accuracy &lt;-<span class="st"> </span>(TP +<span class="st"> </span>TN)/(TP +<span class="st"> </span>TN +<span class="st"> </span>FP +<span class="st"> </span>FN)
+accuracy &lt;-<span class="st"> </span><span class="kw">sum</span>(<span class="kw">diag</span>(confusionMatrix))/<span class="kw">sum</span>(confusionMatrix)<span class="co"># 試試這樣算</span>
+TPR &lt;-<span class="st"> </span>TP/(TP +<span class="st"> </span>FN)
+FPR &lt;-<span class="st"> </span>FP/(FP +<span class="st"> </span>TN)
+
+<span class="co"># accuracy, TPR, FPR</span>
+accuracy</code></pre></div>
+<pre><code>## [1] 0.8683473</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">TPR</code></pre></div>
+<pre><code>## [1] 0.7413793</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">FPR</code></pre></div>
+<pre><code>## [1] 0.04481132</code></pre>
 </div>
 <div id="rmse" class="slide section level2">
 <h1>均方根誤差RMSE</h1>
@@ -264,6 +311,18 @@ RMSE1</code></pre></div>
 <li>計算RMSE2</li>
 <li>比較RMSE1與RMSE2</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 建立一個線性模型lmFit_2, 用規定的五個變數預測dec</span>
+lmFit_2 &lt;-<span class="st"> </span><span class="kw">lm</span>(<span class="dt">formula =</span> dec ~<span class="st"> </span>freq +<span class="st"> </span>angle +<span class="st"> </span>chLength +<span class="st"> </span>velocity +<span class="st"> </span>thickness, <span class="dt">data =</span> airUCI)
+<span class="co"># 將原始資料的五個變數篩選出</span>
+airUCIToBePredicted &lt;-<span class="st"> </span><span class="kw">data.frame</span>(airUCI[, <span class="kw">c</span>(<span class="dv">1</span>:<span class="dv">5</span>)])
+<span class="co"># 用建好的模型預測dec</span>
+prediction &lt;-<span class="st"> </span><span class="kw">predict</span>(lmFit_2, <span class="dt">newdata =</span> airUCIToBePredicted)
+<span class="co"># 再利用公式計算預測趨勢線與實際值的的RMSE</span>
+RMSE2 &lt;-<span class="st"> </span><span class="kw">sqrt</span>(<span class="kw">sum</span>( (airUCI$dec -<span class="st"> </span>prediction) ^<span class="st"> </span><span class="dv">2</span>) /<span class="st"> </span><span class="kw">nrow</span>(airUCI))
+
+<span class="co"># 比較 RMSE1 與 RMSE2</span>
+RMSE2 -<span class="st"> </span>RMSE1</code></pre></div>
+<pre><code>## [1] -0.4165337</code></pre>
 </div>
 <div id="rr-squared" class="slide section level2">
 <h1>R平方R-Squared</h1>
@@ -295,6 +354,20 @@ r_sq</code></pre></div>
 <li>自行計算R平方</li>
 <li>與 <code>summary()</code> 的結果比較</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">lmFit &lt;-<span class="st"> </span><span class="kw">lm</span>(<span class="dt">formula =</span> dec ~<span class="st"> </span>freq +<span class="st"> </span>angle +<span class="st"> </span>chLength, <span class="dt">data =</span> airUCI)
+
+decEst &lt;-<span class="st"> </span><span class="kw">predict</span>(lmFit, <span class="dt">newdata =</span> <span class="kw">data.frame</span>(airUCI[, <span class="dv">1</span>:<span class="dv">3</span>]))
+
+<span class="co"># 計算R-squared</span>
+res &lt;-<span class="st"> </span>airUCI$dec -<span class="st"> </span>decEst
+ss_res &lt;-<span class="st"> </span><span class="kw">sum</span> (res ^<span class="st"> </span><span class="dv">2</span>)
+ss_tot &lt;-<span class="st"> </span><span class="kw">sum</span>( (airUCI$dec -<span class="st"> </span><span class="kw">mean</span>(airUCI$dec))^<span class="dv">2</span> )
+r_sq &lt;-<span class="st"> </span><span class="dv">1</span> -<span class="st"> </span>ss_res /<span class="st"> </span>ss_tot
+r_sq</code></pre></div>
+<pre><code>## [1] 0.4279971</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 跟 summary() 的結果比較</span>
+<span class="kw">summary</span>(lmFit)$r.squared</code></pre></div>
+<pre><code>## [1] 0.4279971</code></pre>
 </div>
 <div id="wss-tss-" class="slide section level2">
 <h1>WSS / TSS 比例</h1>
@@ -346,7 +419,25 @@ ratio</code></pre></div>
 <li>仿照前例, 計算WSS/TSS</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">seedsUCI &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;/Users/tkuo/ntu_train/NTUTrainRL3/data/seedsUCI.csv&quot;</span>, <span class="dt">header =</span> <span class="ot">FALSE</span>, <span class="dt">col.names =</span> <span class="kw">c</span>(<span class="st">&quot;area&quot;</span>, <span class="st">&quot;perimeter&quot;</span>, <span class="st">&quot;compactness&quot;</span>, <span class="st">&quot;length&quot;</span>, <span class="st">&quot;width&quot;</span>, <span class="st">&quot;asymmetry&quot;</span>, <span class="st">&quot;grooveLength&quot;</span>, <span class="st">&quot;type&quot;</span>))
-seedsUCIToBeClustered &lt;-<span class="st"> </span>seedsUCI[, -<span class="dv">8</span>]</code></pre></div>
+<span class="kw">str</span>(seedsUCI)</code></pre></div>
+<pre><code>## 'data.frame':    210 obs. of  8 variables:
+##  $ area        : num  15.3 14.9 14.3 13.8 16.1 ...
+##  $ perimeter   : num  14.8 14.6 14.1 13.9 15 ...
+##  $ compactness : num  0.871 0.881 0.905 0.895 0.903 ...
+##  $ length      : num  5.76 5.55 5.29 5.32 5.66 ...
+##  $ width       : num  3.31 3.33 3.34 3.38 3.56 ...
+##  $ asymmetry   : num  2.22 1.02 2.7 2.26 1.35 ...
+##  $ grooveLength: num  5.22 4.96 4.83 4.8 5.17 ...
+##  $ type        : int  1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">seedsUCIToBeClustered &lt;-<span class="st"> </span>seedsUCI[, -<span class="dv">8</span>]
+kmeansSeeds&lt;-<span class="kw">kmeans</span>(seedsUCIToBeClustered, <span class="dt">centers =</span> <span class="dv">3</span>)
+
+<span class="co"># 計算WSS/TSS的比例</span>
+WSS &lt;-<span class="st"> </span>kmeansSeeds$tot.withinss
+BSS &lt;-<span class="st"> </span>kmeansSeeds$betweenss
+ratio &lt;-<span class="st"> </span>WSS/(WSS +<span class="st"> </span>BSS)
+ratio</code></pre></div>
+<pre><code>## [1] 0.2164757</code></pre>
 </div>
 <div id="-" class="slide section level2">
 <h1>關於機器學習, 資料探勘與統計</h1>
@@ -482,6 +573,12 @@ test &lt;-<span class="st"> </span>shuffledTitanic[testIndices, ]
 <ul>
 <li>我希望training約有536個觀測值, test約有178個觀測值</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 536 / 714 = 0.75</span>
+<span class="co"># 依照75%:25%的比例切分training與test</span>
+trainingIndices &lt;-<span class="st"> </span><span class="dv">1</span>:<span class="kw">round</span>(<span class="fl">0.75</span> *<span class="st"> </span>n)
+training &lt;-<span class="st"> </span>shuffledTitanic[trainingIndices, ]
+testIndices &lt;-<span class="st"> </span>(<span class="kw">round</span>(<span class="fl">0.75</span> *<span class="st"> </span>n) +<span class="st"> </span><span class="dv">1</span>):n
+test &lt;-<span class="st"> </span>shuffledTitanic[testIndices, ]</code></pre></div>
 </div>
 <div class="slide section level2">
 <h1>更細膩精準地切分你的訓練與測試</h1>
@@ -544,6 +641,37 @@ for (i in <span class="dv">1</span>:<span class="dv">4</span>) {
 <li>k-fold cross validation, k = 8</li>
 <li>將平均的 accuracies 印出</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 洗牌</span>
+n &lt;-<span class="st"> </span><span class="kw">nrow</span>(titanic)
+<span class="kw">set.seed</span>(<span class="dv">123</span>)
+shuffledTitanic &lt;-<span class="st"> </span>titanic[<span class="kw">sample</span>(n), ]
+
+<span class="co"># accuracies向量</span>
+accuracies &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="ot">NA</span>, <span class="dt">times =</span> <span class="dv">8</span>)
+kFold &lt;-<span class="st"> </span><span class="kw">length</span>(accuracies)
+
+for (i in <span class="dv">1</span>:kFold) {
+  <span class="co"># test的列數</span>
+  indices &lt;-<span class="st"> </span>(((i<span class="dv">-1</span>) *<span class="st"> </span><span class="kw">round</span>((<span class="dv">1</span>/kFold)*<span class="kw">nrow</span>(shuffledTitanic))) +<span class="st"> </span><span class="dv">1</span>):((i*<span class="kw">round</span>((<span class="dv">1</span>/kFold) *<span class="st"> </span><span class="kw">nrow</span>(shuffledTitanic))))
+  training &lt;-<span class="st"> </span>shuffledTitanic[-indices,]
+  test &lt;-<span class="st"> </span>shuffledTitanic[indices,]
+  <span class="co"># 設定亂數種子</span>
+  <span class="kw">set.seed</span>(<span class="dv">123</span>)
+  <span class="co"># 建立決策樹模型</span>
+  tree &lt;-<span class="st"> </span><span class="kw">rpart</span>(Survived ~<span class="st"> </span>., training, <span class="dt">method =</span> <span class="st">&quot;class&quot;</span>)
+  
+  <span class="co"># 預測</span>
+  prediction &lt;-<span class="st"> </span><span class="kw">predict</span>(tree, test, <span class="dt">type=</span><span class="st">&quot;class&quot;</span>)
+  
+  <span class="co"># 建立混淆矩陣</span>
+  confusionMatrix &lt;-<span class="st"> </span><span class="kw">table</span>(test$Survived, prediction)
+  
+  <span class="co"># 把每次的accuracy放回accuracies向量</span>
+  accuracies[i] &lt;-<span class="st"> </span><span class="kw">sum</span>(<span class="kw">diag</span>(confusionMatrix))/(<span class="kw">sum</span>(confusionMatrix))
+}
+<span class="co"># 平均這8個accuracy</span>
+<span class="kw">mean</span>(accuracies)</code></pre></div>
+<pre><code>## [1] 0.7766854</code></pre>
 </div>
 <div id="underfitting-vs.overfitting" class="slide section level2">
 <h1>Underfitting vs. Overfitting?</h1>
@@ -618,7 +746,20 @@ default_classifier &lt;-<span class="st"> </span>function(x){
   prediction[x &gt;<span class="st"> </span><span class="dv">4</span>] &lt;-<span class="st"> </span><span class="dv">1</span>
   prediction[x &lt;=<span class="st"> </span><span class="dv">4</span>] &lt;-<span class="st"> </span><span class="dv">0</span>
   <span class="kw">return</span>(prediction)
-}</code></pre></div>
+}
+
+<span class="co"># training資料集的accuracy</span>
+defaultPredictionTrain &lt;-<span class="st"> </span><span class="kw">default_classifier</span>(defaultDataTrain$debtIncomeRatio)
+confusionMatrixTrain &lt;-<span class="st"> </span><span class="kw">table</span>(defaultDataTrain$default, defaultPredictionTrain)
+accuracyTrain &lt;-<span class="st"> </span><span class="kw">sum</span>(<span class="kw">diag</span>(confusionMatrixTrain)) /<span class="st"> </span><span class="kw">sum</span>(confusionMatrixTrain)
+accuracyTrain</code></pre></div>
+<pre><code>## [1] 0.7692308</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># test資料集的accuracy</span>
+defaultPredictionTest &lt;-<span class="st"> </span><span class="kw">default_classifier</span>(defaultDataTest$debtIncomeRatio)
+confusionMatrixTest &lt;-<span class="st"> </span><span class="kw">table</span>(defaultDataTest$default, defaultPredictionTest)
+accuracyTest &lt;-<span class="st"> </span><span class="kw">sum</span>(<span class="kw">diag</span>(confusionMatrixTest)) /<span class="st"> </span><span class="kw">sum</span>(confusionMatrixTest)
+accuracyTest</code></pre></div>
+<pre><code>## [1] 0.7083333</code></pre>
 </div>
 
   <!-- dynamically load mathjax for compatibility with self-contained -->
