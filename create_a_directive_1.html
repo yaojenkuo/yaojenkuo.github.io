@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Create a Hello World Directive</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<!-- tell Angular to use our new app module -->
+
+<body ng-app="myApp">
+    <!-- the created directive -->
+    <hello-world></hello-world>
+    <script>
+    var myApp = angular.module('myApp', []); // a new app module
+
+    myApp.directive('helloWorld', function() { // give directive a name
+        function link(scope, element, attr) {
+            element.text("Hello World!");
+        }
+        return {
+            link: link,
+            restrict: 'E' // tell Angular to use the element name, C for class name
+        }
+    });
+    </script>
+</body>
+
+</html>
