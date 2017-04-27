@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About on Yao-Jen Kuo</title>
+    <link>/about/</link>
+    <description>Recent content in About on Yao-Jen Kuo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy;2017 Yao-Jen Kuo</copyright>
+    <lastBuildDate>Wed, 26 Apr 2017 20:12:52 +0800</lastBuildDate>
+    
+	<atom:link href="/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

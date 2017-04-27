@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Portfolios on Yao-Jen Kuo</title>
+    <link>/portfolio/</link>
+    <description>Recent content in Portfolios on Yao-Jen Kuo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy;2017 Yao-Jen Kuo</copyright>
+    <lastBuildDate>Thu, 27 Apr 2017 12:32:16 +0800</lastBuildDate>
+    
+	<atom:link href="/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SQL 及 R 語言的資料分析實戰</title>
+      <link>/portfolio/csiersql/</link>
+      <pubDate>Thu, 27 Apr 2017 12:32:16 +0800</pubDate>
+      
+      <guid>/portfolio/csiersql/</guid>
+      <description> 本課程希望可以結合 SQL 與 R 語言，讓商業分析師（非資訊部門員工）能獨立完成從資料抓取到分析的整個流程，進而提升對工作的掌握度。
+適合修課對象  想學習 SQL 與 R 語言的產品、行銷與金融分析從業人士 未接觸過程式的初學者  課程大綱  SQL 基礎 SQL 進階 建立 R 語言的開發環境 建立 R 語言與資料庫的連結 讀取不同的資料格式 簡單的繪圖（Base plotting system） dplyr 套件 簡單的繪圖（ggplot2） 用 RMarkdown 撰寫報告  </description>
+    </item>
+    
+  </channel>
+</rss>
