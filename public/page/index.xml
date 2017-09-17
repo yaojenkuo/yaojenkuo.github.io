@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Yao-Jen Kuo</title>
+    <link>/page/</link>
+    <description>Recent content in Pages on Yao-Jen Kuo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>tonykuoyj@gmail.com (Yao-Jen Kuo)</managingEditor>
+    <webMaster>tonykuoyj@gmail.com (Yao-Jen Kuo)</webMaster>
+    
+	<atom:link href="/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About me</title>
+      <link>/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>tonykuoyj@gmail.com (Yao-Jen Kuo)</author>
+      <guid>/page/about/</guid>
+      <description>It is nice to meet a ping pong talent(estimated USATT rating: 2,100+), who is also a marathon runner (PR 02:56:04) and a data enthusiast.
+Data Enthusiast  Co-founder of Kyosei.ai(Current) Lecturer at NTU CSIE Training Program(Current) Open Course Developer at DataCamp(Current, Remote) Senior Data Analyst at Coupang(2016) Analytical Consultant at SAS(2013-2016) Management Associate Program at CTBC(2012-2013)  Marathon Runner  2-time Boston Marathon Qualifier in 2016, 2017 PR 02:56:04 at 2017 Standard Chartered Marathon in Taipei.</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>/page/project/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>tonykuoyj@gmail.com (Yao-Jen Kuo)</author>
+      <guid>/page/project/</guid>
+      <description> 著作  輕鬆學習 R 語言 - 紙本書 輕鬆學習 R 語言 - GitBook R 語言使用者的 Python 學習筆記 - iT 邦幫忙 R 語言使用者的 Python 學習筆記 - GitHub  客製課程  Python 與資料科學入門，玉山商業銀行（2017 夏）  台大資工系統訓練班  R 程式設計/R 語言與資料科學應用 Python 與資料科學應用 R 語言與網站爬蟲 SQL 及 R 語言的資料分析實戰  </description>
+    </item>
+    
+  </channel>
+</rss>
