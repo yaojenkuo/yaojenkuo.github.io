@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Yao-Jen Kuo</title>
-    <link>/tags/</link>
+    <link>http://yaojenkuo.github.io/tags/</link>
     <description>Recent content in Tags on Yao-Jen Kuo</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>tonykuoyj@gmail.com (Yao-Jen Kuo)</managingEditor>
     <webMaster>tonykuoyj@gmail.com (Yao-Jen Kuo)</webMaster>
     <lastBuildDate>Fri, 15 Sep 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://yaojenkuo.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>R Markdown</title>
-      <link>/tags/r-markdown/</link>
+      <link>http://yaojenkuo.github.io/tags/r-markdown/</link>
       <pubDate>Fri, 15 Sep 2017 00:00:00 +0000</pubDate>
       <author>tonykuoyj@gmail.com (Yao-Jen Kuo)</author>
-      <guid>/tags/r-markdown/</guid>
+      <guid>http://yaojenkuo.github.io/tags/r-markdown/</guid>
       <description></description>
     </item>
     

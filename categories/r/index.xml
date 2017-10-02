@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R on Yao-Jen Kuo</title>
-    <link>/categories/r/</link>
+    <link>http://yaojenkuo.github.io/categories/r/</link>
     <description>Recent content in R on Yao-Jen Kuo</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>tonykuoyj@gmail.com (Yao-Jen Kuo)</managingEditor>
     <webMaster>tonykuoyj@gmail.com (Yao-Jen Kuo)</webMaster>
     <lastBuildDate>Fri, 15 Sep 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://yaojenkuo.github.io/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hello Blogdown!</title>
-      <link>/post/hello-blogdown/</link>
+      <link>http://yaojenkuo.github.io/post/hello-blogdown/</link>
       <pubDate>Fri, 15 Sep 2017 00:00:00 +0000</pubDate>
       <author>tonykuoyj@gmail.com (Yao-Jen Kuo)</author>
-      <guid>/post/hello-blogdown/</guid>
+      <guid>http://yaojenkuo.github.io/post/hello-blogdown/</guid>
       <description>R Code 這是我認為使用 blogdown 套件最棒的功能。
-print(&amp;quot;Hello R!&amp;quot;) ## [1] &amp;quot;Hello R!&amp;quot; summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.:19.0 3rd Qu.: 56.00 ## Max. :25.0 Max. :120.00  R Plot plot(cars)  Figure 1: Test   Python Code def say_hello(name): return &amp;quot;Hello %s!&amp;quot; % (name) print say_hello(&amp;quot;Tony&amp;quot;) ## Hello Tony!</description>
+print(&amp;quot;Hello R!&amp;quot;) ## [1] &amp;quot;Hello R!&amp;quot; summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.:19.0 3rd Qu.: 56.00 ## Max. :25.0 Max. :120.00  R Plot plot(cars)  Figure 1: Test   </description>
     </item>
     
   </channel>
