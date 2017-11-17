@@ -184,7 +184,7 @@ Forbes, APR 6, 1998
 
 ---
 
-![](img/op_income.png)
+![](img/op_income_plot.png)
 
 ## 快速自動化處理資料
 
