@@ -9,6 +9,10 @@ output:
     center: true
 ---
 
+## 投影片連結
+
+http://yaojenkuo.io/tech_talks/map_of_learning_r
+
 # 關於講師
 
 ## 關於我
@@ -33,10 +37,10 @@ var yaoJenKuo = {
 
 <a href="https://ithelp.ithome.com.tw/2017ironman/8th_winner" target="_blank">![](https://storage.googleapis.com/dsc_2017_img/ithelp_s.png)</a>
 
-## 講師經歷
+---
 
 - 台大資工系統訓練班（2016 - 現在）
-- 2017 資料科學年會講師
+- 2017 資料科學年會講者
 - 國立台北商業大學（2017 秋）
 - 玉山商業銀行（2017 夏）
 
@@ -58,88 +62,18 @@ Google 圖片
 
 > Data Scientist: The Sexiest Job of the 21st Century.
 
-[Harvard Business Review OCTOBER 2012 ISSUE](https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century)
-
-# 大數據究竟有多大？
-
-## 個人偏好
-
-通常我喜歡說資料科學 :)
-
-## 「規模」只是其中一個特徵
-
-- Volume（規模）
-- Variety（多樣）
-- Velocity（即時）
-- Veracity（雜亂）
+[Harvard Business Review OCT, 2012](https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century)
 
 ## 資料科學的範疇
 
-- 資料來源與儲存
-- 資料處理
-- 資料視覺化
+- 資料技術
+- 視覺化
 - 機器學習
 - 高效能運算
 
-## 雨後春筍的技術生態系
+## 雨後春筍般的技術生態系
 
 ![](img/big_data_open_source_tools.png)
-
-# Data-driven Decision
-
-## Data-driven Decision 的浪潮
-
-資料科學一直都在，只是怎麼被大家接收而已
-
-- Statistical analytics
-- Business intelligence
-- Marketing science
-- ...etc.
-
-## 銀行實務
-
-- 信用卡與信貸的審核拿捏
-- 房屋的鑑價
-- 企業的信用評等
-- ...etc.
-
-## 零售實務
-
-- 上架費用定價
-- 購物籃分析
-- 折扣試算
-- ...etc.
-
----
-
-![](img/netflix.jpg)
-
----
-
-![](img/house-of-cards.jpg)
-
-## Target
-
-[How Target Figured Out A Teen Girl Was Pregnant Before Her Father Did](https://www.forbes.com/sites/kashmirhill/2012/02/16/how-target-figured-out-a-teen-girl-was-pregnant-before-her-father-did/#383ea48a6668)
-
-Forbes, FEB 16, 2012
-
-## Wal-Mart
-
-[Diaper-beer syndrome](https://www.forbes.com/forbes/1998/0406/6107128a.html#4cc8513a6260)
-
-Forbes, APR 6, 1998
-
----
-
-任何一個 data-drive decision made 都是漂亮的**大數據**行銷應用
-
-## 大數據行銷應用趨勢
-
-- 數位廣告投放
-- 跨螢廣告投放
-- 個人化 STP
-- 即時回饋
 
 # 資料科學的程式語言
 
@@ -161,7 +95,7 @@ Forbes, APR 6, 1998
 
 - 免費
 - 開放
-- 高市佔率
+- 高市佔
 - 跨平台
 - 彈性大
 
@@ -172,21 +106,52 @@ Forbes, APR 6, 1998
 - 整合開發環境
     - [RStudio](https://www.rstudio.com/products/rstudio/download/)
 
-# 可以用 R 語言做什麼事情
+# R vs. Python
+
+## 我推薦都要學
+
+> Both languages have a lot of similarities in syntax and approach, and you can’t go wrong with one, the other, or both. [Vik Paruchuri](https://www.dataquest.io/blog/python-vs-r/)
+
+## 問自己幾個問題
+
+- 有沒有寫過程式
+- 喜歡函數型或物件導向編程
+- 以什麼應用為主
+    - 統計分析
+    - 視覺化
+    - 深度學習
+    - 網站後端建置資料科學系統
+
+# 究竟可以用來做什麼事情
 
 ## 建立一個選股策略
 
 [財務自由的世界：財務分析就是一場投資的戰爭](http://www.books.com.tw/products/0010562279?utm_source=cmoney&utm_medium=ap-books&utm_content=recommend&utm_campaign=ap-201410)
 
----
+## 上市公司股價前一百
 
-![](img/top_100.png)
+```{r echo=FALSE}
+df <- read.csv("data/top_100.csv", stringsAsFactors = FALSE)
+df
+```
 
----
+## 最後選擇標的
 
-![](img/op_income_plot.png)
+```{r echo=FALSE}
+library(tidyr)
 
-## 快速自動化處理資料
+res <- read.csv("data/result.csv", stringsAsFactors = FALSE)
+res
+```
+
+## 看一下營業收益率
+
+```{r echo = FALSE}
+source("~/stock_strategy_huang/plot_op_income.R")
+plot_op_income(res)
+```
+
+## 自動化處理資料
 
 ![](img/eu_raw_data.png)
 
@@ -194,7 +159,62 @@ Forbes, APR 6, 1998
 
 ![](img/long_dfs.png)
 
-## 建立一個資料科學作品集
+---
+
+```{r echo=FALSE, message=FALSE}
+library(ggplot2)
+library(dplyr)
+
+long_df_c <- read.csv("~/yaojenkuo.github.io/tech_talks/data/eu_elec_data.csv", stringsAsFactors = FALSE)
+#long_df_c$DayHour <- as.POSIXct(long_df_c$DayHour)
+long_df_c$Day <- as.Date(long_df_c$Day)
+long_df_c$Month <- format(long_df_c$Day, "%m")
+long_df_c$Electricity <- as.numeric(long_df_c$Electricity)
+summarized_long_df_c <- long_df_c %>%
+  group_by(Country, Month) %>%
+  summarize(sum_elec = sum(Electricity, na.rm = TRUE))
+ggplot(summarized_long_df_c, aes(x = Month, y = sum_elec, color = Country)) +
+  geom_line(group = 1) +
+  facet_wrap(~ Country, nrow = 6, scales = "free") +
+  theme(legend.position="none")
+```
+
+## 建立一個互動圖表
+
+```{r echo = FALSE, message=FALSE}
+library(plotly)
+library(gapminder)
+
+p <- gapminder %>%
+  plot_ly(
+    x = ~gdpPercap, 
+    y = ~lifeExp, 
+    size = ~pop, 
+    color = ~continent, 
+    frame = ~year, 
+    text = ~country, 
+    hoverinfo = "text",
+    type = 'scatter',
+    mode = 'markers'
+  ) %>%
+  layout(
+    xaxis = list(
+      type = "log"
+    ),
+    yaxis = list(
+      type = "log"
+    )
+  ) %>% 
+  animation_button(
+    x = 1, xanchor = "right", y = 0, yanchor = "bottom"
+  ) %>%
+  animation_slider(
+    currentvalue = list(prefix = "YEAR ")
+  )
+p
+```
+
+## 建立一個作品集網站
 
 ```bash
 mkdir blogdown_project
@@ -222,9 +242,15 @@ blogdown::serve_site()
 blogdown::new_site(theme = "gcushen/hugo-academic")
 ```
 
-# 動手安裝！
+# Live Demo {data-background="img/man-working-on-laptop-with-coffee-mug-in-background.jpg"}
 
 # {data-background="http://www.onepiecegold.com/wp-content/uploads/2016/03/AuML130.jpg"}
+
+## 談談自己的案例
+
+## 不一樣的學習起點
+
+[Tidyverse：R 語言學習之旅的新起點](https://medium.com/datainpoint/tidyverse-r-%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92%E4%B9%8B%E6%97%85%E7%9A%84%E6%96%B0%E8%B5%B7%E9%BB%9E-3b01ca6a348c)
 
 ## 深入淺出
 
@@ -245,8 +271,6 @@ blogdown::new_site(theme = "gcushen/hugo-academic")
 - 資料載入
 - Base Plotting System
 - ggplot2
-- RMarkdown
-- %>% 運算子與 dplyr 套件
 - 文字函數與正規表達式
 - rvest 套件
 - caret 套件
@@ -255,8 +279,11 @@ blogdown::new_site(theme = "gcushen/hugo-academic")
 
 - 解決工作上的問題
 - 建立作品集
+- [面試](http://yaojenkuo.io/uber)
 
-# 置入性行銷
+# 我經營的學習資源
+
+## [台大資工系統訓練班](https://train.csie.ntu.edu.tw/train/teacher.php?id=103)
 
 ## 輕鬆學習 R 語言
 
@@ -264,9 +291,19 @@ blogdown::new_site(theme = "gcushen/hugo-academic")
 
 [天瓏網路書店](https://www.tenlong.com.tw/products/9789864764822)
 
-## Udemy 教學影片
+## Udemy 教學
 
 [R 語言輕鬆學習：基礎篇](https://www.udemy.com/learn-r-the-easy-way-1/?couponCode=LEARNR)
+
+## Medium
+
+[DataInPoint](https://medium.com/datainpoint)
+
+---
+
+> 毋免驚，咱寬寬仔行 。
+
+[滅火器，海上的人](https://youtu.be/u3cKrp96i_M)
 
 ## 和我聯絡
 
