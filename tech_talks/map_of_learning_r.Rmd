@@ -214,6 +214,10 @@ p <- gapminder %>%
 p
 ```
 
+---
+
+<https://yaojenkuo.shinyapps.io/gapminder_shiny/>
+
 # Live Demo {data-background="img/man-working-on-laptop-with-coffee-mug-in-background.jpg"}
 
 # {data-background="http://www.onepiecegold.com/wp-content/uploads/2016/03/AuML130.jpg"}
