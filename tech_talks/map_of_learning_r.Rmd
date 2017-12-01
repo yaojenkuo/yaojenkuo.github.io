@@ -214,34 +214,6 @@ p <- gapminder %>%
 p
 ```
 
-## 建立一個作品集網站
-
-```bash
-mkdir blogdown_project
-```
-
----
-
-```r
-setwd("~/blogdown_project")
-blogdown::new_site()
-blogdown::serve_site()
-```
-
----
-
-![](img/serve_site.png)
-
----
-
-![](img/addin.png)
-
-## 使用其他的主題模板
-
-```r
-blogdown::new_site(theme = "gcushen/hugo-academic")
-```
-
 # Live Demo {data-background="img/man-working-on-laptop-with-coffee-mug-in-background.jpg"}
 
 # {data-background="http://www.onepiecegold.com/wp-content/uploads/2016/03/AuML130.jpg"}
