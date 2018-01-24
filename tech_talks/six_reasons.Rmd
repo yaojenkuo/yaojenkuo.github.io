@@ -1,0 +1,323 @@
+---
+title: "商業分析師學 R 語言的六個理由"
+output: 
+  revealjs::revealjs_presentation:
+    theme: black
+    highlight: zenburn
+    center: true
+---
+
+# ![](https://pics.me.me/rwant-to-have-a-job-that-you-love-not-statistical-4629803.png)
+
+---
+
+## 工作
+
+- Kyosei.ai
+- Coupang
+- SAS
+- CTBC
+
+## 教學
+
+- Python 與網站擷取@文化大學進修推廣部
+- R 語言與視覺化應用@國立台北商業大學
+- Python 與機器學習@玉山商業銀行
+
+## 我的學習資源
+
+- [台大資工系統訓練班](https://train.csie.ntu.edu.tw/train/teacher.php?id=103)
+- [輕鬆學習 R 語言](http://www.books.com.tw/products/0010763975)
+- [Udemy](https://www.udemy.com/learn-r-the-easy-way-1/?couponCode=LEARNR)
+- [DataInPoint](https://medium.com/datainpoint)
+
+# 六個理由
+
+## 免費又好裝
+
+![](img/reason_5.jpeg)
+
+## 不是主修程式設計
+
+![](img/reason_1.jpg)
+
+## 內外兼修
+
+![](img/reason_2.gif)
+
+## 溝通、溝通、還是溝通
+
+![](img/reason_6.jpg)
+
+## 活躍的社群支援
+
+![](img/reason_3.jpg)
+
+## 學起來很容易
+
+<a href="http://www.books.com.tw/products/0010763975">![](img/r_book.jpg)</a>
+
+# {data-background="http://www.onepiecegold.com/wp-content/uploads/2016/03/AuML130.jpg"}
+
+## 也可以在這裡試試就好
+
+http://jupyter.org/
+
+## 到底有多容易安裝？
+
+- https://cran.r-project.org/
+- https://www.rstudio.com/products/rstudio/download/
+
+## 從 Tidyverse 與 Gapminder 開始
+
+## Tidyverse
+
+[Tidyverse：R 語言學習之旅的新起點](https://medium.com/datainpoint/tidyverse-r-%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92%E4%B9%8B%E6%97%85%E7%9A%84%E6%96%B0%E8%B5%B7%E9%BB%9E-3b01ca6a348c)
+
+## Gapminder
+
+- https://www.gapminder.org/
+- [Hans Rosling's 200 Countries, 200 Years, 4 Minutes](https://www.youtube.com/watch?v=jbkSRLYSojo)
+
+## 安裝上述兩個套件
+
+```{r eval = FALSE}
+pkgs <- c("tidyverse", "gapminder")
+install.packages(pkgs)
+```
+
+## 載入
+
+```{r}
+library(tidyverse)
+library(gapminder)
+```
+
+## 常用的函數
+
+|函數|用途|
+|:----|:----|
+|`filter()`|觀測值選擇|
+|`select()`|變數選擇|
+|`mutate()`|新增變數|
+|`arrange()`|排序|
+|`summarise()`|聚合|
+|`group_by()`|分組|
+
+## 草帽海賊團資料
+
+```{r}
+load(url("https://storage.googleapis.com/r_rookies/straw_hat_df.RData"))
+```
+
+```{r eval=FALSE}
+straw_hat_df %>%
+  dim()
+straw_hat_df %>% 
+  View()
+straw_hat_df %>%
+  summary()
+straw_hat_df %>%
+  str()
+```
+
+## `filter()`
+
+- 選出女性船員
+
+```{r message=FALSE}
+straw_hat_df %>%
+  filter(gender == "Female")
+```
+
+## 篩選兩個或更多條件
+
+- 選出女性船員並且年紀大於等於 30 歲
+
+```{r}
+straw_hat_df %>%
+  filter(gender == "Female" & age >= 30)
+```
+
+## `select()`
+
+- 選擇姓名與性別
+
+```{r}
+straw_hat_df %>%
+  select(name, gender)
+```
+
+## 整合前面的函數
+
+```{r}
+# 選出女性船員，但只回傳姓名就好
+straw_hat_df %>%
+  filter(gender == "Female") %>%
+  select(name)
+```
+
+## `mutate()`
+
+- 新增兩年前的年紀
+- 利用 `age` 減去 2
+
+```{r}
+straw_hat_df %>%
+  mutate(age_2yr_ago = age - 2)
+```
+
+## `arrange()`
+
+- 以 `age` 排序
+
+```{r}
+straw_hat_df %>%
+  arrange(age)
+```
+
+## `summarise()`
+
+- 計算平均年齡 `mean_age`
+
+```{r}
+straw_hat_df %>%
+  summarise(mean_age = mean(age))
+```
+
+## `group_by()`
+
+- 依照性別計算平均年齡 `mean_age`
+
+```{r}
+straw_hat_df %>%
+  group_by(gender) %>%
+  summarise(mean_age = mean(age))
+```
+
+## gapminder 資料
+
+```{r eval=FALSE}
+gapminder %>%
+  dim()
+gapminder %>% 
+  View()
+gapminder %>%
+  summary()
+gapminder %>%
+  str()
+```
+
+## 篩選出台灣
+
+```{r eval=FALSE}
+gapminder %>%
+  filter(___ == "___")
+```
+
+## 2007 年全球總人口數為多少？
+
+```{r eval=FALSE}
+gapminder %>%
+  filter(___ == ___) %>%
+  summarise(ttl_pop = sum(___))
+```
+
+## 承上各洲總人口數分別為多少，請由小到大排序
+
+```{r eval=FALSE}
+gapminder %>%
+  filter(___ == ___) %>%
+  group_by(___) %>%
+  summarise(ttl_pop = sum(___)) %>%
+  arrange(___)
+```
+
+## 開始來畫個圖如何？
+
+## 散佈圖
+
+```{r}
+gapminder_2007 <- gapminder %>%
+  filter(year == 2007)
+scatter <- ggplot(gapminder_2007, aes(x = gdpPercap, y = lifeExp, colour = continent)) +
+  geom_point() +
+  theme_minimal()
+```
+
+---
+
+```{r}
+scatter
+```
+
+## 線圖
+
+```{r}
+north_asia <- gapminder %>%
+  filter(country %in% c("China", "Japan", "Taiwan", "Korea, Rep."))
+line_plot <- ggplot(north_asia, aes(x = year, y = gdpPercap, colour = country)) +
+  geom_line() +
+  theme_minimal()
+```
+
+---
+
+```{r}
+line_plot
+```
+
+## 直方圖
+
+```{r}
+histogram <- ggplot(gapminder_2007, aes(x = gdpPercap)) +
+  geom_histogram(bins = 20, fill = rgb(1, 0, 0, 0.5)) +
+  theme_minimal()
+```
+
+---
+
+```{r}
+histogram
+```
+
+## 盒鬚圖
+
+```{r}
+box_plot <- ggplot(gapminder_2007, aes(x = continent, y = gdpPercap, colour = continent)) +
+  geom_boxplot() +
+  theme_minimal() +
+  theme(legend.position = "none")
+```
+
+---
+
+```{r}
+box_plot
+```
+
+## 長條圖
+
+```{r}
+gdpPercap_2007_na <- gapminder %>%
+  filter(year == 2007 & country %in% c("China", "Japan", "Taiwan", "Korea, Rep.")) %>%
+  arrange(gdpPercap)
+
+gdpPercap_2007_na$country <- factor(gdpPercap_2007_na$country, levels = gdpPercap_2007_na$country)
+
+bar_plot <- ggplot(gdpPercap_2007_na, aes(x = country, y = gdpPercap, fill = country, alpha = 0.5)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  theme_minimal() +
+  theme(legend.position = "none")
+```
+
+---
+
+```{r}
+bar_plot
+```
+
+---
+
+![](img/fattest.jpeg)
