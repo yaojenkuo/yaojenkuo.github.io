@@ -11,18 +11,18 @@ output:
 
 ---
 
+## 教學
+
+- Python 與網站擷取（文化大學進修推廣部）
+- R 語言與視覺化應用（國立台北商業大學）
+- Python 與機器學習（玉山商業銀行）
+
 ## 工作
 
-- Kyosei.ai
+- Kyosei.ai（V）
 - Coupang
 - SAS
 - CTBC
-
-## 教學
-
-- Python 與網站擷取@文化大學進修推廣部
-- R 語言與視覺化應用@國立台北商業大學
-- Python 與機器學習@玉山商業銀行
 
 ## 我的學習資源
 
@@ -37,7 +37,7 @@ output:
 
 ![](img/reason_5.jpeg)
 
-## 不是主修程式設計
+## 不強調物件導向
 
 ![](img/reason_1.jpg)
 
@@ -59,11 +59,11 @@ output:
 
 # {data-background="http://www.onepiecegold.com/wp-content/uploads/2016/03/AuML130.jpg"}
 
-## 也可以在這裡試試就好
+## 可以在這裡試試就好
 
 http://jupyter.org/
 
-## 到底有多容易安裝？
+## 體驗到底有多容易安裝
 
 - https://cran.r-project.org/
 - https://www.rstudio.com/products/rstudio/download/
@@ -88,7 +88,7 @@ install.packages(pkgs)
 
 ## 載入
 
-```{r}
+```{r message=FALSE}
 library(tidyverse)
 library(gapminder)
 ```
