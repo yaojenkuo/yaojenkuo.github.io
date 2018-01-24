@@ -31,6 +31,12 @@ output:
 - [Udemy](https://www.udemy.com/learn-r-the-easy-way-1/?couponCode=LEARNR)
 - [DataInPoint](https://medium.com/datainpoint)
 
+# 你在咖啡廳做什麼？
+
+## {data-background="http://www.telegraph.co.uk/content/dam/food-and-drink/2016/05/04/96970564cafeworking-xlarge_trans_NvBQzQNjv4BqZgEkZX3M936N5BQK4Va8RWtT0gK_6EfZT336f62EI5U.jpg"}
+
+## {data-background="https://nirvanaseeker.files.wordpress.com/2012/10/youve_got_mail_393.jpeg"}
+
 # 六個理由
 
 ## 免費又好裝
