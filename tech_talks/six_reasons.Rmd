@@ -1,5 +1,6 @@
 ---
 title: "商業分析師學 R 語言的六個理由"
+author: http://yaojenkuo.io/tech_talks/six_reasons
 output: 
   revealjs::revealjs_presentation:
     theme: black
