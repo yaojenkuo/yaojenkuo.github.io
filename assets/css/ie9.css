@@ -1,50 +1,41 @@
 /*
-	Fractal by HTML5 UP
+	Identity by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* Spotlight */
+/* Basic */
 
-	.spotlight .image {
-		width: 25%;
-		display: inline-block;
-		vertical-align: middle;
+	body {
+		background-image: url("../../images/bg.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: bottom center;
+		background-attachment: fixed;
 	}
 
-	.spotlight .content {
-		width: 65%;
-		display: inline-block;
-		vertical-align: middle;
+		body:after {
+			display: none;
+		}
+
+/* List */
+
+	ul.icons li a:before {
+		color: #c8cccf;
 	}
 
-	.spotlight:after {
-		content: '';
-		display: block;
-		clear: both;
+	ul.icons li a:hover:before {
+		color: #ff7496;
 	}
 
-	.spotlight:nth-child(2n) .image {
-		margin: 0 3em 0 0;
-	}
+/* Wrapper */
 
-	.spotlight:nth-child(2n) .content {
-		text-align: left;
-	}
-
-/* Header */
-
-	#header {
-		height: auto;
+	#wrapper {
 		text-align: center;
 	}
 
-		#header .content {
-			display: inline-block;
-			vertical-align: middle;
-		}
+/* Main */
 
-		#header .image {
-			display: inline-block;
-			vertical-align: middle;
-		}
+	#main {
+		display: inline-block;
+	}

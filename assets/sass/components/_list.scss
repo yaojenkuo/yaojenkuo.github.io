@@ -3,7 +3,7 @@
 @import '../libs/mixins';
 
 ///
-/// Fractal by HTML5 UP
+/// Identity by HTML5 UP
 /// html5up.net | @ajlkn
 /// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 ///
@@ -34,8 +34,7 @@
 			padding-left: 0;
 
 			li {
-				border-top-style: solid;
-				border-top-width: _size(border-width);
+				border-top: solid 1px _palette(border);
 				padding: 0.5em 0;
 
 				&:first-child {
@@ -49,107 +48,52 @@
 			cursor: default;
 			list-style: none;
 			padding-left: 0;
+			margin-top: -0.675em;
 
 			li {
 				display: inline-block;
-				padding: 0 1.5em 0 0;
+				padding: 0.675em 0.5em;
 
-				&:last-child {
-					padding-right: 0 !important;
-				}
+				a {
+					@include icon-alt(false, true);
+					position: relative;
+					display: block;
+					width: 3.75em;
+					height: 3.75em;
+					border-radius: 100%;
+					border: solid _size(border-width) _palette(border);
+					line-height: 3.75em;
+					overflow: hidden;
+					text-align: center;
+					text-indent: 3.75em;
+					white-space: nowrap;
 
-				.icon {
 					&:before {
-						font-size: 1.75rem;
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: inherit;
+						height: inherit;
+						font-size: 1.85rem;
+						line-height: inherit;
+						text-align: center;
+						text-indent: 0;
+					}
+
+					&:hover {
+						border-color: _palette(highlight);
 					}
 				}
 			}
 
-			&.major {
+			@include breakpoint(xsmall) {
 				li {
-					padding: 0 2.5em 0 0;
-
-					.icon {
+					a {
 						&:before {
-							font-size: 2.75rem;
+							font-size: 1.5rem;
 						}
 					}
 				}
-
-				// Small.
-					@include breakpoint(small) {
-						li {
-							padding: 0 1.25em 0 0;
-
-							.icon {
-								&:before {
-									font-size: 1.75rem;
-								}
-							}
-						}
-					}
-
-			}
-
-			&.labeled {
-				li {
-					margin: 1em 0;
-					padding: 0 2em 0 0;
-
-					.icon {
-						&:before {
-							vertical-align: middle;
-							font-size: 2.25rem;
-							margin-right: 0.5em;
-						}
-
-						.label {
-							display: inline-block;
-							vertical-align: middle;
-							color: _palette(fg);
-						}
-					}
-				}
-
-				// Small.
-					@include breakpoint(small) {
-
-						// Portrait.
-							@include orientation(portrait) {
-								text-align: left;
-								margin-right: auto;
-								margin-left: auto;
-								display: inline-block;
-								white-space: nowrap;
-
-								li {
-									display: block;
-									padding: 0;
-									margin: 1.5em 0 0 0;
-
-									.icon {
-										&:before {
-											width: 1.5em;
-											display: block;
-											float: left;
-											margin-right: 0;
-										}
-
-										&:after {
-											content: '';
-											display: block;
-											clear: both;
-										}
-									}
-
-									&:first-child {
-										margin-top: 0;
-									}
-								}
-							}
-
-					}
-
 			}
 		}
 
@@ -167,106 +111,6 @@
 					padding-right: 0;
 				}
 			}
-
-			&.small {
-				li {
-					padding: 0 (_size(element-margin) * 0.25) 0 0;
-				}
-			}
-
-			&.vertical {
-				li {
-					display: block;
-					padding: (_size(element-margin) * 0.5) 0 0 0;
-
-					&:first-child {
-						padding-top: 0;
-					}
-
-					> * {
-						margin-bottom: 0;
-					}
-				}
-
-				&.small {
-					li {
-						padding: (_size(element-margin) * 0.25) 0 0 0;
-
-						&:first-child {
-							padding-top: 0;
-						}
-					}
-				}
-			}
-
-			&.fit {
-				display: table;
-				margin-left: (_size(element-margin) * -0.5);
-				padding: 0;
-				table-layout: fixed;
-				width: calc(100% + #{(_size(element-margin) * 0.5)});
-
-				li {
-					display: table-cell;
-					padding: 0 0 0 (_size(element-margin) * 0.5);
-
-					> * {
-						margin-bottom: 0;
-					}
-				}
-
-				&.small {
-					margin-left: (_size(element-margin) * -0.25);
-					width: calc(100% + #{(_size(element-margin) * 0.25)});
-
-					li {
-						padding: 0 0 0 (_size(element-margin) * 0.25);
-					}
-				}
-			}
-
-			// XSmall.
-				@include breakpoint(xsmall) {
-
-					// Portrait.
-						@include orientation(portrait) {
-							margin: 0 0 _size(element-margin) 0;
-
-							li {
-								padding: (_size(element-margin) * 0.5) 0 0 0;
-								display: block;
-								text-align: center;
-								width: 100%;
-
-								&:first-child {
-									padding-top: 0;
-								}
-
-								> * {
-									width: 100%;
-									margin: 0 !important;
-
-									&.icon {
-										&:before {
-											margin-left: -2em;
-										}
-									}
-								}
-							}
-
-							&.small {
-								li {
-									padding: (_size(element-margin) * 0.25) 0 0 0;
-
-									&:first-child {
-										padding-top: 0;
-									}
-								}
-							}
-						}
-
-				}
-
 		}
 	}
 
@@ -283,15 +127,3 @@
 			margin-left: _size(element-margin);
 		}
 	}
-
-	@mixin color-list($p: null) {
-		ul {
-			&.alt {
-				> li {
-					border-top-color: _palette($p, border);
-				}
-			}
-		}
-	}
-
-	@include color-list;

@@ -3,7 +3,7 @@
 @import '../libs/mixins';
 
 ///
-/// Fractal by HTML5 UP
+/// Identity by HTML5 UP
 /// html5up.net | @ajlkn
 /// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 ///
@@ -12,25 +12,32 @@
 
 	form {
 		margin: 0 0 _size(element-margin) 0;
+
+		> .field {
+			margin: 0 0 _size(element-margin) 0;
+
+			> :last-child {
+				margin-bottom: 0;
+			}
+		}
 	}
 
 	label {
+		color: _palette(fg-bold);
 		display: block;
 		font-size: 0.9em;
-		font-weight: _font(weight-bold);
 		margin: 0 0 (_size(element-margin) * 0.5) 0;
 	}
 
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	input[type="tel"],
 	select,
 	textarea {
 		@include vendor('appearance', 'none');
 		border-radius: _size(border-radius);
-		border: none;
-		border-style: solid;
-		border-width: _size(border-width);
+		border: solid 1px _palette(border);
 		color: inherit;
 		display: block;
 		outline: 0;
@@ -41,15 +48,19 @@
 		&:invalid {
 			box-shadow: none;
 		}
+
+		&:focus {
+			border-color: _palette(highlight);
+		}
 	}
 
 	.select-wrapper {
-		@include icon;
+		@include icon('\f078');
 		display: block;
 		position: relative;
 
 		&:before {
-			content: '\f078';
+			color: _palette(border);
 			display: block;
 			height: _size(element-height);
 			line-height: _size(element-height);
@@ -89,6 +100,7 @@
 
 		& + label {
 			@include icon;
+			color: _palette(fg);
 			cursor: pointer;
 			display: inline-block;
 			font-size: 1em;
@@ -98,9 +110,9 @@
 			position: relative;
 
 			&:before {
+				background: _palette(border-bg);
 				border-radius: _size(border-radius);
-				border-style: solid;
-				border-width: _size(border-width);
+				border: solid 1px _palette(border);
 				content: '';
 				display: inline-block;
 				height: (_size(element-height) * 0.6);
@@ -108,14 +120,21 @@
 				line-height: (_size(element-height) * 0.575);
 				position: absolute;
 				text-align: center;
-				top: 0;
+				top: 0.15em;
 				width: (_size(element-height) * 0.6);
 			}
 		}
 
 		&:checked + label {
 			&:before {
+				color: _palette(highlight);
 				content: '\f00c';
+			}
+		}
+
+		&:focus + label {
+			&:before {
+				border-color: _palette(highlight);
 			}
 		}
 	}
@@ -137,116 +156,26 @@
 	}
 
 	::-webkit-input-placeholder {
+		color: _palette(fg-light) !important;
 		opacity: 1.0;
 	}
 
 	:-moz-placeholder {
+		color: _palette(fg-light) !important;
 		opacity: 1.0;
 	}
 
 	::-moz-placeholder {
+		color: _palette(fg-light) !important;
 		opacity: 1.0;
 	}
 
 	:-ms-input-placeholder {
+		color: _palette(fg-light) !important;
 		opacity: 1.0;
 	}
 
 	.formerize-placeholder {
+		color: _palette(fg-light) !important;
 		opacity: 1.0;
 	}
-
-	@mixin color-form($p: null) {
-
-		label {
-			color: _palette($p, fg-bold);
-		}
-
-		input[type="text"],
-		input[type="password"],
-		input[type="email"],
-		select,
-		textarea {
-			color: inherit;
-			background-color: _palette($p, border-bg);
-			border-color: _palette($p, border);
-
-			&:focus {
-				@if _palette($p, invert) == true {
-					border-color: _palette($p, fg-bold);
-					box-shadow: 0 0 0 _size(border-width) _palette($p, fg-bold);
-				}
-				@else {
-					border-color: _palette(accent1, bg);
-					box-shadow: 0 0 0 _size(border-width) _palette(accent1, bg);
-				}
-			}
-		}
-
-		.select-wrapper:before {
-			color: _palette($p, border);
-		}
-
-		input[type="checkbox"],
-		input[type="radio"], {
-
-			& + label {
-				color: _palette($p, fg);
-
-				&:before {
-					background-color: _palette($p, border-bg);
-					border-color: _palette($p, border);
-				}
-			}
-
-			&:checked + label {
-				&:before {
-					@if _palette($p, invert) == true {
-						background-color: _palette($p, fg-bold);
-						border-color: _palette($p, fg-bold);
-						color: _palette($p, bg);
-					}
-					@else {
-						background-color: _palette(accent1, bg);
-						border-color: _palette(accent1, bg);
-						color: _palette(accent1, fg-bold);
-					}
-				}
-			}
-
-			&:focus + label {
-				&:before {
-					@if _palette($p, invert) == true {
-						border-color: _palette($p, fg-bold);
-						box-shadow: 0 0 0 _size(border-width) _palette($p, fg-bold);
-					}
-					@else {
-						border-color: _palette(accent1, bg);
-						box-shadow: 0 0 0 _size(border-width) _palette(accent1, bg);
-					}
-				}
-			}
-		}
-
-		::-webkit-input-placeholder {
-			color: _palette($p, fg-light) !important;
-		}
-
-		:-moz-placeholder {
-			color: _palette($p, fg-light) !important;
-		}
-
-		::-moz-placeholder {
-			color: _palette($p, fg-light) !important;
-		}
-
-		:-ms-input-placeholder {
-			color: _palette($p, fg-light) !important;
-		}
-
-		.formerize-placeholder {
-			color: _palette($p, fg-light) !important;
-		}
-	}
-
-	@include color-form;
