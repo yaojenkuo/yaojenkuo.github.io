@@ -1,41 +1,125 @@
 /*
-	Identity by HTML5 UP
+	Spectral by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* Basic */
+/* Spotlight */
 
-	body {
-		background-image: url("../../images/bg.jpg");
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: bottom center;
-		background-attachment: fixed;
+	.spotlight {
+		display: block;
 	}
 
-		body:after {
+		.spotlight .image {
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		.spotlight .content {
+			padding: 4em 4em 2em 4em ;
+			display: inline-block;
+		}
+
+		.spotlight:after {
+			clear: both;
+			content: '';
+			display: block;
+		}
+
+/* Features */
+
+	.features {
+		display: block;
+	}
+
+		.features li {
+			float: left;
+		}
+
+		.features:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+
+/* Banner + Wrapper (style4) */
+
+	#banner,
+	.wrapper.style4 {
+		background-image: url("../../images/banner.jpg");
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+	}
+
+		#banner:before,
+		.wrapper.style4:before {
+			background: #000000;
+			content: '';
+			height: 100%;
+			left: 0;
+			opacity: 0.5;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
+		#banner .inner,
+		.wrapper.style4 .inner {
+			position: relative;
+			z-index: 1;
+		}
+
+/* Banner */
+
+	#banner {
+		padding: 14em 0 12em 0 ;
+		height: auto;
+	}
+
+		#banner:after {
 			display: none;
 		}
 
-/* List */
+/* CTA */
 
-	ul.icons li a:before {
-		color: #c8cccf;
+	#cta .inner header {
+		float: left;
 	}
 
-	ul.icons li a:hover:before {
-		color: #ff7496;
+	#cta .inner .actions {
+		float: left;
 	}
 
-/* Wrapper */
-
-	#wrapper {
-		text-align: center;
+	#cta .inner:after {
+		clear: both;
+		content: '';
+		display: block;
 	}
 
 /* Main */
 
-	#main {
-		display: inline-block;
+	#main > header {
+		background-image: url("../../images/banner.jpg");
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
 	}
+
+		#main > header:before {
+			background: #000000;
+			content: '';
+			height: 100%;
+			left: 0;
+			opacity: 0.5;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
+		#main > header > * {
+			position: relative;
+			z-index: 1;
+		}
