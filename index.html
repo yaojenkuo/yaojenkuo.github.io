@@ -24,7 +24,7 @@
 		<!-- Header -->
 		<header id="header" class="alt">
 			<h1>
-				<a href="index.html">Yao-Jen Kuo</a>
+				<a href="#banner" class="more scrolly">Yao-Jen Kuo</a>
 			</h1>
 
 			<nav id="nav">
@@ -36,13 +36,16 @@
 						<div id="menu">
 							<ul>
 								<li>
-									<a href="index.html">Top</a>
+									<a href="#banner" class="more scrolly">Top</a>
 								</li>
 								<li>
-									<a href="#about">About</a>
+									<a href="#about" class="more scrolly">About</a>
 								</li>
 								<li>
-									<a href="#work">Work</a>
+									<a href="#work" class="more scrolly">Work</a>
+								</li>
+								<li>
+									<a href="#footer" class="more scrolly">Contact</a>
 								</li>
 
 							</ul>
@@ -126,7 +129,7 @@
 			</section>
 			<section class="spotlight">
 				<div class="image">
-					<img src="images/rawpixel-com-274862-unsplash.jpg" alt="" />
+					<img src="images/wrtier.png" alt="" />
 				</div>
 				<div class="content">
 					<h2>Writer</h2>
@@ -167,14 +170,15 @@
 							<a href="https://ithelp.ithome.com.tw/users/20103511/ironman/1077" target="_blank">冠軍文章</a>。</p>
 					</li>
 					<li class="icon fa-code">
-						<h3>R Programming: 30 hours</h3>
-						<p>Bringing data science program
-							<a href="https://yaojenkuo.io/r_programming/" target="_blank">in class</a>.</p>
+						<h3>R Programming</h3>
+						<p>30 hours of
+							<a href="https://yaojenkuo.io/r_programming/" target="_blank">in class</a> R programming from scratch.</p>
 					</li>
 					<li class="icon fa-code">
-						<h3>Python for Data Analysis: 10 hours</h3>
-						<p>Bringing data science program
-							<a href="https://yaojenkuo.io/py4da/" target="_blank">in class</a>.</p>
+						<h3>Python for Data Analysis</h3>
+						<p>10 hours of
+							<a href="https://yaojenkuo.io/py4da/" target="_blank">in class</a> Python applications including pyquery, NumPy, and pandas.
+						</p>
 					</li>
 				</ul>
 			</div>
@@ -223,7 +227,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="tony@kyosei.ai" class="icon fa-envelope-o">
+					<a href="mailto:tony@kyosei.ai" class="icon fa-envelope-o">
 						<span class="label">Email</span>
 					</a>
 				</li>
@@ -249,17 +253,6 @@
 	<script src="assets/js/util.js"></script>
 	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 	<script src="assets/js/main.js"></script>
-	<script>
-		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-			anchor.addEventListener('click', function (e) {
-				e.preventDefault();
-
-				document.querySelector(this.getAttribute('href')).scrollIntoView({
-					behavior: 'smooth'
-				});
-			});
-		});
-	</script>
 </body>
 
 </html>
