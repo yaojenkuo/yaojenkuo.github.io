@@ -62,15 +62,6 @@ Download from <https://cran.r-project.org/>
 
 Download from <https://www.rstudio.com/products/rstudio/download>
 
-# Interface of RStudio
-
-## Four blocks
-
-- Script
-- Console
-- Environment
-- Multi-functional
-
 # Quickstart
 
 ## Using `<-` for assignment
