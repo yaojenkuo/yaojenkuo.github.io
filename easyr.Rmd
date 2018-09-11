@@ -13,6 +13,8 @@ output:
 knitr::opts_chunk$set(results = "hold", message = FALSE, warning = FALSE)
 ```
 
+<https://yaojenkuo.io/easyr>
+
 # About Me
 
 ## Who am I
