@@ -1,0 +1,475 @@
+---
+title: "Getting Started with R and Web Scraping"
+author: "郭耀仁"
+output: 
+  revealjs::revealjs_presentation:
+    highlight: pygments
+    reveal_options:
+      slideNumber: true
+      previewLinks: true
+---
+
+```{r include=FALSE}
+knitr::opts_chunk$set(results = "hold", message = FALSE, warning = FALSE)
+```
+
+# About Me
+
+## Who am I
+
+>- Co-founder of [Kyosei.ai](https://kyosei.ai/) / [Pyradise](https://pyradise.com/)
+>- Lecturer at [NTU CSIE Code Camp](https://train.csie.ntu.edu.tw/train/teacher.php?id=103)
+>- Manages [DataInPoint](https://www.facebook.com/datainpoint/)
+>- 2017 iT 邦幫忙鐵人賽大數據組冠軍
+>- DataCamp open course developer
+  >- [R 語言導論](https://www.datacamp.com/community/open-courses/r-%E8%AA%9E%E8%A8%80%E5%B0%8E%E8%AB%96?tap_a=5644-dce66f&tap_s=194899-1fb421)
+  >- [資料框整理技巧](https://www.datacamp.com/community/open-courses/%E8%B3%87%E6%96%99%E6%A1%86%E6%95%B4%E7%90%86%E6%8A%80%E5%B7%A7?tap_a=5644-dce66f&tap_s=194899-1fb421)
+
+## Work experience
+
+>- Senior Data Analyst, Coupang
+>- Analytical Consultant, SAS
+>- Management Associate, CTBC
+>- Research Intern, McKinsey & Company
+
+# A Quick Introduction
+
+> R is a free software environment for statistical computing and graphics.
+
+## R ranks top 1 among its peers
+
+<https://spectrum.ieee.org/static/interactive-the-top-programming-languages-2018>
+
+## The characteristics of R
+
+>- Comparing to Matlab, SAS, SPSS: **R is free**
+>- Comparing to Julia: **R has a larger community**
+>- Functional programming
+
+## R in one sentence
+
+> Applying functions to objects.
+
+# Installation
+
+## R: core of computation
+
+Download from <https://cran.r-project.org/>
+
+![](https://i.imgur.com/A5OwsnX.png)
+
+## RStudio: the IDE
+
+Download from <https://www.rstudio.com/products/rstudio/download>
+
+# Interface of RStudio
+
+## Four blocks
+
+- Script
+- Console
+- Environment
+- Multi-functional
+
+# Quickstart
+
+## Using `<-` for assignment
+
+- `=` is OKAY, but `<-` is more common
+- Using `Alt + -` to get `<-`
+
+## Using `#` for comments
+
+```{r}
+# Declaring objects
+
+# Declaring function
+
+```
+
+## Assignments in action
+
+```{r}
+# Declaring objects
+my_favorite_star <- "Tom Cruise"
+my_lucky_number <- 24
+r_is_easy <- TRUE
+
+# Declaring function
+say_hello <- function(){
+  return("Hello R!")
+}
+```
+
+## Printing objects or calling function
+
+```{r results='hold'}
+# Printing objects
+my_favorite_star
+my_lucky_number
+r_is_easy
+
+# Calling function
+say_hello()
+```
+
+## Common questions: Why does R Console keep showing `+`?
+
+The reason is that R is still expecting inputs from us
+
+```{r eval=FALSE}
+my_favorite_player <- "Steve Nash
+
+say_hello <- function(){
+  return("Hello R!")
+
+help(print
+```
+
+## 2 ways to solve it
+
+1. Complete your inputs
+2. ESC
+
+## Common questions: What is the difference between installing and library package?
+
+## Install packages
+
+- `install.packages()`
+- Do it once
+
+## Library packages
+
+- `library()`
+- Do it every time
+
+## Common questions: How to assign a file path correctly?
+
+- Always use forward slash when declaring file path
+- Try not to use non-English username
+
+```{r eval=FALSE}
+desktop_path <- "/Users/USERNAME/Desktop"   # MacOS desktop
+desktop_path <- "C:/Users/USERNAME/Desktop" # Windows desktop
+```
+
+## Common learning path for programming
+
+>- Installation of compiler or interpreter
+>- Choosing a friendly IDE
+>- Quickstart
+>- Variable types
+  >- Functions
+  >- Control flows
+>- Data structure
+  >- Iterations
+>- (Optional) Class
+>- (Optional) Package development
+
+# R Crash Course
+
+## There are 7 variable types
+
+>- numeric
+>- (Optional)integer
+>- (Optional)complex
+>- character
+>- logical
+>- Date
+>- POSIXct
+
+## How to define a function in R
+
+```{r eval=FALSE}
+MYFUNCTION <- function(x, y, arg1, arg2, ...) {
+  # Using x, y, arg1, arg2 to generate OUTPUT
+  return(OUTPUT)
+}
+```
+
+## Using `if-else if-else` statements
+
+```{r eval=FALSE}
+# 3 or more branches
+if (CONDITION_1) {
+  # do something when CONDITION_1 equals TRUE
+} else if (CONDITION_2) {
+  # do something when CONDITION_2 equals TRUE
+} else {
+  # do something when both CONDITION_1 and CONDITION_2 equals FALSE
+}
+```
+
+## Data structures...
+
+>- collect scalars
+>- can be indexing
+>- can be slicing
+>- are iterable
+
+## There are 6 major data structures
+
+>- vector
+>- list
+>- (optional)factor
+>- data.frame
+>- (optional)matrix
+>- (optional)array
+
+## Why is there always a `[1]` when printing?
+
+> In fact, R never considers using scalar.
+
+## Iterations: `for`
+
+```{r eval=FALSE}
+for (ITERATOR in ITERABLE) {
+  # do something iteratively until ITERATOR hits the end of ITERABLE
+}
+```
+
+## Iterations: `while`
+
+```{r eval=FALSE}
+while (CONDITION) {
+  # do something iteratively when CONDITION == TRUE
+}
+```
+
+# Getting Data with R
+
+## Common ways getting data with R
+
+>- From files
+>- From database
+>- From web
+
+## R can easily import different types of data
+
+|Source|Format|Function|
+|------|------|--------|
+|CSV|`data.frame`|`read.csv()`|
+|TXT|`data.frame`|`read.table()`|
+|Spreadsheet|`data.frame`|`readxl::read_excel()`|
+|JSON|`list`|`jsonlite::fromJSON()`|
+
+## R is capable to extract data from various database management systems
+
+<https://db.rstudio.com/>
+
+# Web Scraping with R
+
+## `jsonlite` for RESTful APIs
+
+```{r eval=FALSE}
+install.packages("jsonlite")
+```
+
+```{r}
+library(jsonlite)
+
+web_url <- "https://ecshweb.pchome.com.tw/search/v3.3/all/results?q=macbook&page=1&sort=rnk/dc"
+macbook <- fromJSON(web_url)
+class(macbook)
+names(macbook)
+```
+
+## `rvest` for HTML documents
+
+```{r eval=FALSE}
+install.packages("rvest")
+```
+
+## The use of `%>%` operator
+
+- Originated from `magrittr` package
+- Now an important operator for the `tidyverse` eco-system
+- Can be generated with: Ctrl + Shift + m
+
+## How to call a function
+
+```{r}
+library(rvest)
+
+# traditional
+sum(1:10)
+
+# using %>%
+1:10 %>% 
+  sum()
+```
+
+## `read_html()` for reading all html contents
+
+```{r}
+library(rvest)
+
+mi_url <- "https://www.imdb.com/title/tt4912910/"
+html_doc <- mi_url %>% 
+  read_html()
+```
+
+## `html_nodes()` to locate elements
+
+```{r}
+html_doc %>% 
+  html_nodes("strong span") # CSS selector
+```
+
+## `html_text()` to remove tags
+
+```{r}
+html_doc %>% 
+  html_nodes("strong span") %>% 
+  html_text()
+```
+
+## Data of html document are characters
+
+```{r}
+html_doc %>% 
+  html_nodes("strong span") %>% 
+  html_text() %>% 
+  as.numeric()
+```
+
+## How to locate elements?
+
+>- By CSS Selectors
+>- By XPath
+
+# The Use of Chrome Plugins
+
+## SelectorGadget
+
+A Chrome plugin for CSS selectors:  [SelectorGadget](https://chrome.google.com/webstore/detail/selectorgadget/mhjhnkcfbdhnjickkkdbjoemdmbfginb)
+
+## XPath Helper
+
+A Chrome plugin for XPath: [XPath Helper](https://chrome.google.com/webstore/detail/xpath-helper/hgimnogjllphhhkhlmebbmlgjoejdpjl)
+
+## Practices: Getting rating information from IMDB.com
+
+```{r}
+library(rvest)
+
+rating <- "https://www.imdb.com/title/tt4912910" %>% 
+  read_html() %>% 
+  html_nodes("strong span") %>% 
+  html_text() %>% 
+  as.numeric()
+rating
+```
+
+## Practices: Getting genre information from IMDB.com
+
+```{r}
+library(rvest)
+
+genre <- "https://www.imdb.com/title/tt4912910" %>% 
+  read_html() %>% 
+  html_nodes(".subtext a") %>% 
+  html_text()
+genre <- genre[-length(genre)]
+genre
+```
+
+## Practices: Getting cast information from IMDB.com
+
+```{r}
+"https://www.imdb.com/title/tt4912910" %>% 
+  read_html() %>% 
+  html_nodes(".primary_photo+ td a") %>% 
+  html_text() %>% 
+  gsub(pattern = "\n", replacement = "") %>% 
+  trimws()
+```
+
+## Getting price ranking from Yahoo! Stock
+
+- Top 100 for TSE: <https://tw.stock.yahoo.com/d/i/rank.php?t=pri&e=tse&n=100>
+- Top 100 for OTC: <https://tw.stock.yahoo.com/d/i/rank.php?t=pri&e=otc&n=100>
+
+```{r}
+get_price_ranking <- function(page_url, is_tse = TRUE) {
+  ticker_company_css <- ".name a"
+  price_css <- ".name+ td"
+  if (is_tse) {
+    page_encoding <- "big5"
+    type <- "上市"
+  } else {
+    page_encoding <- "cp950"
+    type <- "上櫃"
+  }
+  html_doc <- page_url %>% 
+    read_html(encoding = page_encoding)
+  
+  ticker_company <- html_doc %>% 
+    html_nodes(ticker_company_css) %>% 
+    html_text() %>% 
+    strsplit(split = "\\s")
+  
+  tickers <- c()
+  companies <- c()
+  for (i in 1:length(ticker_company)) {
+    tickers <- c(tickers, ticker_company[[i]][1])
+    companies <- c(companies, ticker_company[[i]][2])
+  }
+  tickers
+  companies
+  prices <- html_doc %>% 
+    html_nodes(price_css) %>% 
+    html_text() %>% 
+    as.numeric()
+
+  df <- data.frame(
+    ticker = tickers,
+    company = companies,
+    price = prices,
+    type = type,
+    stringsAsFactors = FALSE
+  )
+  return(df)
+}
+
+tse_url <- "https://tw.stock.yahoo.com/d/i/rank.php?t=pri&e=tse&n=100"
+otc_url <- "https://tw.stock.yahoo.com/d/i/rank.php?t=pri&e=otc&n=100"
+tse_df <- get_price_ranking(tse_url)
+otc_df <- get_price_ranking(otc_url, is_tse = FALSE)
+result_df <- rbind(tse_df, otc_df)
+```
+
+## Result table
+
+```{r}
+knitr::kable(result_df)
+```
+
+# Answer a Question and Get a R Book
+
+## 輕鬆學習 R 語言
+
+<https://www.books.com.tw/products/0010763975>
+
+## Use any tool you like
+
+<https://storage.googleapis.com/ds_data_import/stock_price_ranking.csv>
+
+## If you want to use R, import with the following script
+
+```{r eval=FALSE}
+file_url <- "https://storage.googleapis.com/ds_data_import/stock_price_ranking.csv"
+stock_price_ranking <- read.csv(file_url, fileEncoding = "utf8")
+```
+
+## Question 1: What is the median stock price for 上市 and 上櫃, respectively?
+
+## Question 2: What is the median stock price for companies with "KY" and without "KY", respectively?
+
+## If you find R interesting after tonight's workshop...
+
+- [R 語言導論](https://www.datacamp.com/community/open-courses/r-%E8%AA%9E%E8%A8%80%E5%B0%8E%E8%AB%96?tap_a=5644-dce66f&tap_s=194899-1fb421)
+- [資料框整理技巧](https://www.datacamp.com/community/open-courses/%E8%B3%87%E6%96%99%E6%A1%86%E6%95%B4%E7%90%86%E6%8A%80%E5%B7%A7?tap_a=5644-dce66f&tap_s=194899-1fb421)
+- [輕鬆學習 R 語言](https://www.books.com.tw/products/0010763975)
+- [NTU CSIE Code Camp](https://train.csie.ntu.edu.tw/train/teacher.php?id=103)
+- [Datainpoint](https://www.facebook.com/datainpoint/)
