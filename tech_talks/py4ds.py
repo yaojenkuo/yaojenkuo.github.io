@@ -1,3 +1,10 @@
+import pandas as pd
+import plotly.graph_objs as go
+import plotly.offline as py
+from plotly import tools
+
+py.init_notebook_mode(connected=True)
+
 def barplot_multiple_choice(df, column_start = '', title = '', color = 'rgb(255, 65, 54)',width= 1000, height=400):
     """Selection_choice_bar_plot: For Multplie choice questions"""
     columns = df.columns[df.columns.str.startswith(column_start)]
@@ -36,7 +43,7 @@ def barplot_multiple_choice(df, column_start = '', title = '', color = 'rgb(255,
     py.iplot(fig)
 
 def get_option_count(df, question_no):
-    columns = non_student_df.columns[non_student_df.columns.str.startswith(question_no)]
+    columns = df.columns[df.columns.str.startswith(question_no)]
     option_count = pd.DataFrame()
     for c in columns[:-1]:
         value = df[c].value_counts()
